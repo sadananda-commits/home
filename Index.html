@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Industrial Land for Sale | Champua, Keonjhar</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#222;
+      line-height:1.6;
+    }
+
+    header{
+      position:relative;
+      height:100vh;
+      overflow:hidden;
+    }
+
+    .slider{
+      width:100%;
+      height:100%;
+      position:relative;
+    }
+
+    .slides{
+      display:flex;
+      width:300%;
+      height:100%;
+      animation:slide 15s infinite;
+    }
+
+    .slides img{
+      width:100vw;
+      height:100vh;
+      object-fit:cover;
+    }
+
+    @keyframes slide{
+      0%{transform:translateX(0);}
+      30%{transform:translateX(0);}
+      35%{transform:translateX(-100vw);}
+      65%{transform:translateX(-100vw);}
+      70%{transform:translateX(-200vw);}
+      95%{transform:translateX(-200vw);}
+      100%{transform:translateX(0);}
+    }
+
+    .overlay{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.6);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-size:55px;
+      margin-bottom:20px;
+      text-transform:uppercase;
+    }
+
+    .hero-content h2{
+      font-size:28px;
+      margin-bottom:25px;
+      color:#ffcc00;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:15px 35px;
+      background:#ff6600;
+      color:white;
+      text-decoration:none;
+      font-size:18px;
+      border-radius:5px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#e65c00;
+    }
+
+    section{
+      padding:70px 10%;
+      background:white;
+      margin-bottom:10px;
+    }
+
+    section h2{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:38px;
+      color:#003366;
+    }
+
+    .highlights{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#f9f9f9;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      color:#ff6600;
+      margin-bottom:15px;
+    }
+
+    .description{
+      max-width:1100px;
+      margin:auto;
+      font-size:18px;
+      text-align:center;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:20px;
+    }
+
+    table th, table td{
+      border:1px solid #ddd;
+      padding:15px;
+      text-align:left;
+    }
+
+    table th{
+      background:#003366;
+      color:white;
+    }
+
+    .business-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .business-item{
+      background:#003366;
+      color:white;
+      padding:20px;
+      border-radius:8px;
+      text-align:center;
+      font-size:18px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    .contact{
+      text-align:center;
+      background:#003366;
+      color:white;
+    }
+
+    .contact h2{
+      color:white;
+    }
+
+    .contact p{
+      font-size:24px;
+      margin:15px 0;
+    }
+
+    .whatsapp-btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:15px 30px;
+      background:#25D366;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+      font-size:18px;
+    }
+
+    iframe{
+      width:100%;
+      height:450px;
+      border:none;
+      border-radius:10px;
+      margin-top:30px;
+    }
+
+    footer{
+      background:#111;
+      color:#ccc;
+      text-align:center;
+      padding:20px;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+      .hero-content h1{
+        font-size:34px;
+      }
+
+      .hero-content h2{
+        font-size:22px;
+      }
+
+      .hero-content p{
+        font-size:16px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="slider">
+    <div class="slides">
+
+      <!-- Replace these with your actual property images -->
+      <img src="https://drive.google.com/uc?export=view&id=1U-G2Al6HkIw6do2yQK5lcGmrq35mebx8"alt="">
+      <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1400" alt="">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1400" alt="">
+
+    </div>
+  </div>
+
+  <div class="overlay">
+    <div class="hero-content">
+
+      <h1>Industrial Land for Sale</h1>
+
+      <h2>2 Acres with 16,000 sqft Godown</h2>
+
+      <p>
+        Prime Industrial Property on NH-20 at Champua, Keonjhar.
+        Ideal for Warehousing, Logistics Hub, Distribution Center,
+        Industrial Setup, FMCG Storage and Commercial Activities.
+      </p>
+
+      <a href="#contact" class="btn">Contact Now</a>
+
+    </div>
+  </div>
+
+</header>
+
+<section>
+
+  <h2>Property Highlights</h2>
+
+  <div class="highlights">
+
+    <div class="card">
+      <h3>Prime Location</h3>
+      <p>Located directly on NH-20 with excellent industrial connectivity.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ready Infrastructure</h3>
+      <p>16,000 sqft ready-to-use industrial godown available.</p>
+    </div>
+
+    <div class="card">
+      <h3>Industrial Power</h3>
+      <p>250 KVA industrial power with 33 KV feeder connectivity.</p>
+    </div>
+
+    <div class="card">
+      <h3>Expansion Opportunity</h3>
+      <p>Additional vacant land available for future expansion.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>About the Property</h2>
+
+  <div class="description">
+
+    <p>
+      A strategically located industrial property spread across 2 acres
+      with a 16,000 sqft ready-built godown situated on NH-20 at Champua,
+      Keonjhar.
+    </p>
+
+    <br>
+
+    <p>
+      This property is highly suitable for logistics companies,
+      warehouse operations, industrial setups, FMCG storage,
+      transport terminals, service centers and multiple allied
+      commercial activities.
+    </p>
+
+    <br>
+
+    <p>
+      Excellent connectivity to Joda, Barbil, Keonjhar, Karanjia and
+      Jamshedpur makes this a premium investment opportunity.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Property Details</h2>
+
+  <table>
+
+    <tr>
+      <th>Feature</th>
+      <th>Details</th>
+    </tr>
+
+    <tr>
+      <td>Total Land Area</td>
+      <td>2 Acres</td>
+    </tr>
+
+    <tr>
+      <td>Godown Area</td>
+      <td>16,000 sqft</td>
+    </tr>
+
+    <tr>
+      <td>Location</td>
+      <td>NH-20, Champua, Keonjhar</td>
+    </tr>
+
+    <tr>
+      <td>Electricity Supply</td>
+      <td>250 KVA Industrial Power</td>
+    </tr>
+
+    <tr>
+      <td>Feeder Connection</td>
+      <td>33 KV Feeder</td>
+    </tr>
+
+    <tr>
+      <td>Future Expansion</td>
+      <td>Additional Vacant Land Available</td>
+    </tr>
+
+  </table>
+
+</section>
+
+<section>
+
+  <h2>Ideal Business Opportunities</h2>
+
+  <div class="business-list">
+
+    <div class="business-item">Warehouse</div>
+    <div class="business-item">Logistics Hub</div>
+    <div class="business-item">Distribution Center</div>
+    <div class="business-item">Industrial Setup</div>
+    <div class="business-item">FMCG Storage</div>
+    <div class="business-item">Transport Terminal</div>
+    <div class="business-item">Service Center</div>
+    <div class="business-item">Commercial Activities</div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Property Gallery</h2>
+
+  <div class="gallery">
+
+    <!-- Replace with your real property images -->
+
+    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200" alt="">
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Location Map</h2>
+
+  <!-- Replace with your actual Google Maps embed -->
+
+  <iframe 
+    src="https://maps.google.com/maps?q=Champua%20Keonjhar&t=&z=13&ie=UTF8&iwloc=&output=embed">
+  </iframe>
+
+</section>
+
+<section id="contact" class="contact">
+
+  <h2>Contact Details</h2>
+
+  <p>📞 6372456791</p>
+  <p>📞 6372614139</p>
+
+  <a class="whatsapp-btn" 
+     href="https://wa.me/916372456791" 
+     target="_blank">
+     WhatsApp Inquiry
+  </a>
+
+</section>
+
+<footer>
+
+  © 2026 Industrial Property Sale | Champua, Keonjhar
+
+</footer>
+
+</body>
+</html>
