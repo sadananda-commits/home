@@ -1115,6 +1115,7 @@ body::before{
       <button class="filter-btn" data-cat="milk">🥛 Pure Milk Sweets</button>
       <button class="filter-btn" data-cat="fried">✨ Golden Fried Sweets</button>
       <button class="filter-btn" data-cat="special">👑 Special Delicacies</button>
+      <button class="filter-btn" data-cat="ghee">🧈 Pure Ghee</button>
     </div>
 
     <div class="menu-grid" id="menuGrid">
@@ -1213,8 +1214,8 @@ body::before{
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="custAddress">Delivery Address *</label>
-            <textarea class="form-control" id="custAddress" rows="3" placeholder="Street, postal code, city…" required style="resize:vertical;"></textarea>
+            <label class="form-label" for="custAddress">Address <span style="color:var(--text-muted);font-weight:400;">(optional)</span></label>
+            <textarea class="form-control" id="custAddress" rows="3" placeholder="Street, postal code, city…" style="resize:vertical;"></textarea>
           </div>
           <div class="form-group">
             <label class="form-label" for="custNote">Special Requests / Notes</label>
@@ -1413,7 +1414,7 @@ body::before{
    4. Authorize and copy the Web App URL
    5. Paste it below as GOOGLE_SCRIPT_URL
    ═══════════════════════════════════════════════════════════════════ */
-const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysWuyYBWFDsqhn-EBnIZnciByMcFX8dyulqHc6uibNmaR97K8CIsgCSqNxaMOLE2L_/exec";
 /* ─── The Google Sheet where orders will land ─────────────────────
    Get the ID from your Sheet URL:
    https://docs.google.com/spreadsheets/d/ >>> SHEET_ID <<< /edit     */
@@ -1568,6 +1569,13 @@ const MENU = [
     desc:"A creative reimagining of the classic Kheer — rolled into an elegant log, baked to set its form, and served as an individual portion. Traditional taste in a modern, beautiful presentation.",
     emoji:"🎂", gradient:"linear-gradient(135deg,#E8D5B7,#6D4C41)",
   },
+  // ── Pure Ghee ─────────────────────────────────────────────────
+  {
+    id:23, cat:"ghee", name:"Fresh Organic Ghee",
+    price:150, unit:"per kg", cartUnit:"kg",
+    desc:"Pure, golden, hand-churned organic ghee — slow-simmered from the finest milk until rich, nutty and beautifully aromatic. A wholesome Satwik essential for cooking, sweets, and daily nourishment.",
+    emoji:"🧈", gradient:"linear-gradient(135deg,#FFE9A8,#C8962A)",
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -1644,7 +1652,7 @@ function initReveal() {
    MENU RENDERING
 ═══════════════════════════════════════════════════════════════════ */
 function catLabel(cat) {
-  return {milk:"Pure Milk", fried:"Golden Fried", special:"Special Delicacy"}[cat] || cat;
+  return {milk:"Pure Milk", fried:"Golden Fried", special:"Special Delicacy", ghee:"Pure Ghee"}[cat] || cat;
 }
 
 function renderMenu() {
@@ -1718,7 +1726,7 @@ MENU.forEach(item => {
 function quickAddToCart(id) {
   const item = MENU.find(m => m.id === id);
   if (!item) return;
-  addItemToCart(item, 1, "pieces");
+  addItemToCart(item, 1, item.cartUnit || "pieces");
 }
 
 document.getElementById("addToCartBtn").addEventListener("click", () => {
@@ -1850,10 +1858,10 @@ async function submitOrder() {
   const note    = document.getElementById("custNote").value.trim();
   const date    = document.getElementById("custDate").value;
 
+  // ── Validation (Address is now OPTIONAL) ─────────────────────
   if (!name)    { showToast("⚠️ Please enter your name."); return; }
   if (!email)   { showToast("⚠️ Please enter your email."); return; }
   if (!phone)   { showToast("⚠️ Please enter your phone number."); return; }
-  if (!address) { showToast("⚠️ Please enter your delivery address."); return; }
   if (cart.length === 0) { showToast("⚠️ Your cart is empty. Add some sweets first!"); return; }
 
   const orderId    = generateOrderId();
@@ -1861,20 +1869,31 @@ async function submitOrder() {
   const total      = cart.reduce((s, c) => s + c.price * c.qty, 0);
   const timestamp  = new Date().toISOString();
 
-  const orderItems = cart.map(c => `${c.name} × ${c.qty} ${c.unit}`).join(" | ");
+  // Fold the preferred date into the Notes field so nothing is lost
+  // while keeping the agreed 11-column sheet structure.
+  let notes = note;
+  if (date) notes = (notes ? notes + " | " : "") + "Preferred date: " + date;
 
+  // One entry per cart line → one row per product in the sheet.
+  const items = cart.map(c => ({
+    product:   c.name,
+    quantity:  `${c.qty} ${c.unit}`,   // e.g. "2 kg", "4 pieces"
+    unitPrice: c.price,                // numeric, in kr.
+    subtotal:  c.price * c.qty,        // numeric, in kr.
+  }));
+
+  // Payload maps 1:1 to the Google Sheet columns.
   const payload = {
     orderId, customerId, timestamp,
-    customerName:    name,
-    customerEmail:   email,
-    customerPhone:   phone,
-    customerAddress: address,
-    preferredDate:   date || "Not specified",
-    specialNote:     note || "None",
-    orderItems,
-    totalAmount:     total + " kr.",
-    sheetId:         GOOGLE_SHEET_ID,
-    sheetTab:        GOOGLE_SHEET_TAB,
+    name:        name,
+    phone:       phone,
+    email:       email,
+    address:     address,        // may be "" — optional
+    items:       items,
+    totalAmount: total,          // numeric, in kr.
+    notes:       notes,
+    sheetId:     GOOGLE_SHEET_ID,
+    sheetTab:    GOOGLE_SHEET_TAB,
   };
 
   const btn = document.getElementById("submitOrderBtn");
@@ -1882,21 +1901,28 @@ async function submitOrder() {
   btn.innerHTML = "⏳ &nbsp;Submitting…";
 
   // ── Send to Google Sheets via Apps Script ────────────────────
+  // Apps Script Web Apps don't return CORS headers a browser can read,
+  // so we POST with mode:"no-cors". A resolved fetch ⇒ delivered;
+  // a thrown fetch ⇒ network failure, which we surface to the user.
   if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE") {
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        mode:   "no-cors",  // Apps Script requires no-cors
-        headers: { "Content-Type": "application/json" },
+        mode:   "no-cors",
+        // text/plain avoids a CORS preflight that Apps Script can't answer
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(payload),
       });
     } catch (err) {
-      console.warn("Google Sheets submission error:", err);
-      // Continue to show success anyway — log locally
+      console.error("Google Sheets submission error:", err);
+      showToast("⚠️ Couldn't submit your order. Please check your connection and try again.");
+      btn.disabled = false;
+      btn.innerHTML = "🙏 &nbsp;Place My Order";
+      return; // Do NOT show the success screen on failure
     }
   } else {
-    // Dev mode — log to console until URL is configured
-    console.log("📋 ORDER PAYLOAD (configure GOOGLE_SCRIPT_URL to send to Sheets):", payload);
+    // Dev mode — log to console until the Web App URL is configured.
+    console.log("📋 ORDER PAYLOAD (set GOOGLE_SCRIPT_URL to send to Sheets):", payload);
   }
 
   // ── Show success ─────────────────────────────────────────────
