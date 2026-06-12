@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Shree Radha Krishna Sweets, Copenhagen | Authentic Satwik Indian Sweets</title>
+<title id="metaTitle">Spiritual Marketplace, Copenhagen | Authentic Satwik Products</title>
 
-<!-- SEO Meta Tags -->
-<meta name="description" content="Authentic Satwik Indian Sweets in Copenhagen. Homemade with devotion. Pure vegetarian, traditional taste, pure ingredients. Order now."/>
-<meta name="keywords" content="Indian sweets Copenhagen, Satwik sweets Denmark, Kalakand Copenhagen, Sandesh Copenhagen, Indian mithai Denmark, homemade Indian sweets, Radha Krishna sweets"/>
-<meta name="author" content="Shree Radha Krishna Sweets, Copenhagen"/>
+<!-- SEO Meta Tags (overridden dynamically from Settings sheet) -->
+<meta id="metaDescription" name="description" content="Authentic Satwik products in Copenhagen. Homemade with devotion. Pure vegetarian, traditional taste, pure ingredients. Order now."/>
+<meta id="metaKeywords" name="keywords" content="spiritual marketplace Copenhagen, Satwik products Denmark, Indian sweets Copenhagen, deity items, spiritual books, temple shop"/>
+<meta name="author" content="Spiritual Marketplace, Copenhagen"/>
 <meta name="robots" content="index, follow"/>
 
 <!-- Open Graph -->
-<meta property="og:title" content="Shree Radha Krishna Sweets, Copenhagen"/>
-<meta property="og:description" content="Authentic Satwik Indian Sweets — Homemade with Devotion. Traditional Taste, Pure Ingredients."/>
+<meta id="ogTitle" property="og:title" content="Spiritual Marketplace, Copenhagen"/>
+<meta id="ogDescription" property="og:description" content="Authentic Satwik Products — Homemade with Devotion. Traditional Taste, Pure Ingredients."/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="en_DK"/>
 
@@ -905,8 +905,8 @@ body::before{
         <text x="22" y="36" text-anchor="middle" font-size="6" fill="#FAF0D8" font-family="serif" font-weight="bold">ॐ</text>
       </svg>
       <div class="nav-logo-text">
-        <span class="nav-logo-main">Shree Radha Krishna Sweets</span>
-        <span class="nav-logo-sub">Copenhagen · Authentic Satwik</span>
+        <span class="nav-logo-main" id="navLogoMain">Spiritual Marketplace</span>
+        <span class="nav-logo-sub" id="navLogoSub">Copenhagen · Authentic Satwik</span>
       </div>
     </a>
     <div class="nav-links">
@@ -916,7 +916,7 @@ body::before{
       <a href="#order">Order</a>
       <a href="#footer">Contact</a>
     </div>
-    <a href="#order" class="nav-cta desktop-only">🍬 Order Now</a>
+    <a href="#order" class="nav-cta desktop-only" id="navCta">🛍️ Order Now</a>
     <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -935,7 +935,7 @@ body::before{
 <section id="hero">
   <!-- Floating petals (created by JS) -->
   <div class="hero-content">
-    <div class="hero-badge">🙏 &nbsp;Satwik · Homemade · Pure Vegetarian</div>
+    <div class="hero-badge" id="heroBadge">🙏 &nbsp;Satwik · Homemade · Pure Vegetarian</div>
 
     <!-- Hero Logo SVG -->
     <div class="hero-logo-wrap">
@@ -970,25 +970,25 @@ body::before{
         <line x1="110" y1="50" x2="160" y2="50" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
         <line x1="240" y1="50" x2="290" y2="50" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
         <!-- Main title -->
-        <text x="200" y="80" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="14" font-weight="800" fill="#FAF0D8" letter-spacing="1">SHREE RADHA KRISHNA</text>
+        <text x="200" y="80" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="14" font-weight="800" fill="#FAF0D8" letter-spacing="1" id="heroLogoLine1">SPIRITUAL</text>
         <!-- Sweet name -->
-        <text x="200" y="105" text-anchor="middle" font-family="'Dancing Script','Brush Script MT',cursive" font-size="32" font-weight="700" fill="#D4AF37">Sweets</text>
+        <text x="200" y="105" text-anchor="middle" font-family="'Dancing Script','Brush Script MT',cursive" font-size="32" font-weight="700" fill="#D4AF37" id="heroLogoLine2">Marketplace</text>
         <!-- Decorative divider -->
         <path d="M130,115 Q200,120 270,115" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.6"/>
         <!-- Diamond dots -->
         <polygon points="195,117 200,122 205,117 200,112" fill="#D4AF37" opacity="0.5"/>
         <!-- Copenhagen -->
-        <text x="200" y="138" text-anchor="middle" font-family="'Poppins',sans-serif" font-size="9" fill="rgba(250,240,216,0.7)" letter-spacing="4">COPENHAGEN</text>
+        <text x="200" y="138" text-anchor="middle" font-family="'Poppins',sans-serif" font-size="9" fill="rgba(250,240,216,0.7)" letter-spacing="4" id="heroLogoCity">COPENHAGEN</text>
         <!-- Bottom ornament -->
         <text x="200" y="162" text-anchor="middle" font-size="10" fill="rgba(200,150,42,0.5)" letter-spacing="12">✦ ✦ ✦</text>
       </svg>
     </div>
 
     <div class="hero-divider"></div>
-    <p class="hero-subtitle">Authentic Satwik Indian Sweets in Copenhagen</p>
-    <p class="hero-subtitle" style="font-style:italic;margin-top:4px;">"Homemade with Devotion · Traditional Taste · Pure Ingredients"</p>
+    <p class="hero-subtitle" id="heroSubtitle1">Authentic Satwik Products in Copenhagen</p>
+    <p class="hero-subtitle" id="heroSubtitle2" style="font-style:italic;margin-top:4px;">"Homemade with Devotion · Traditional Taste · Pure Ingredients"</p>
 
-    <div class="hero-tags" style="margin-top:18px;">
+    <div class="hero-tags" id="heroTags" style="margin-top:18px;">
       <span class="hero-tag">🌿 Pure Vegetarian</span>
       <span class="hero-tag">🙏 Satwik</span>
       <span class="hero-tag">🏠 Homemade</span>
@@ -996,9 +996,9 @@ body::before{
       <span class="hero-tag">🇮🇳 Authentic Indian Style</span>
     </div>
 
-    <div class="hero-btns">
-      <a href="#menu" class="btn-primary">🍬 Explore Menu</a>
-      <a href="#order" class="btn-secondary">📋 Place an Order</a>
+    <div class="hero-btns" id="heroBtns">
+      <a href="#menu" class="btn-primary" id="heroBtnPrimary">🍬 Explore Products</a>
+      <a href="#order" class="btn-secondary" id="heroBtnSecondary">📋 Place an Order</a>
     </div>
   </div>
   <div class="hero-scroll-hint">
@@ -1023,8 +1023,8 @@ body::before{
           <div class="about-ring">
             <div class="about-inner-text">
               <div class="about-om">ॐ</div>
-              <div class="about-inner-title">Shree Radha<br>Krishna Sweets</div>
-              <div class="about-inner-sub">Est. 2025 · Copenhagen</div>
+              <div class="about-inner-title" id="aboutInnerTitle">Spiritual<br>Marketplace</div>
+              <div class="about-inner-sub" id="aboutInnerSub">Est. 2025 · Copenhagen</div>
               <div style="margin-top:14px;font-size:1.6rem;letter-spacing:4px;">🌸🍬🌸</div>
               <div style="margin-top:8px;font-size:0.7rem;color:var(--text-soft);letter-spacing:1px;">Satwik · Pure · Authentic</div>
             </div>
@@ -1035,12 +1035,12 @@ body::before{
         </div>
       </div>
       <div class="about-text reveal reveal-delay-2">
-        <div class="section-eyebrow">🙏 Our Story</div>
-        <h2 class="section-title" style="text-align:left;">A Beautiful Initiative<br><em style="font-style:italic;color:var(--saffron);">Born from Devotion</em></h2>
-        <p class="about-lead">"Where every sweet is a prayer, and every bite carries the blessing of Radha Krishna."</p>
-        <p class="about-body">We started <strong>Shree Radha Krishna Sweets</strong> with a simple but heartfelt vision — to bring the pure taste of authentic Indian Satwik sweets to the Indian community in Copenhagen. In Denmark, truly authentic homemade Indian sweets are hard to find, and we saw this as an opportunity to serve our community with love and devotion.</p>
-        <p class="about-body">Every sweet we prepare is made with the finest ingredients, no onion or garlic, no artificial preservatives — purely in the Satwik tradition. From the moment we begin preparation to the final garnish, each creation is offered with devotion as a service to Shree Radha Krishna.</p>
-        <div class="about-badges">
+        <div class="section-eyebrow" id="aboutEyebrow">🙏 Our Story</div>
+        <h2 class="section-title" id="aboutTitle" style="text-align:left;">A Beautiful Initiative<br><em style="font-style:italic;color:var(--saffron);">Born from Devotion</em></h2>
+        <p class="about-lead" id="aboutLead">"Where every product is a prayer, and every purchase carries a blessing."</p>
+        <p class="about-body" id="aboutBody1">We started <strong>Spiritual Marketplace</strong> with a simple but heartfelt vision — to bring authentic Satwik products to the Indian and spiritual community in Copenhagen. In Denmark, truly authentic homemade and devotional products are hard to find, and we saw this as an opportunity to serve our community with love and devotion.</p>
+        <p class="about-body" id="aboutBody2">Every item we offer — whether prepared in our kitchen or sourced with care — follows the Satwik tradition: no onion or garlic in our food items, no artificial preservatives, and each product chosen or made with devotion as a service to Shree Radha Krishna.</p>
+        <div class="about-badges" id="aboutBadges">
           <span class="about-badge">🌿 100% Satwik</span>
           <span class="about-badge">🏠 Homemade</span>
           <span class="about-badge">🌸 Vegetarian</span>
@@ -1063,30 +1063,11 @@ body::before{
 <!-- ═══ WHY CHOOSE US ═══ -->
 <section id="why">
   <div class="container">
-    <div class="section-eyebrow reveal">✦ Our Promise</div>
-    <h2 class="section-title reveal">Why Choose Us?</h2>
-    <p class="section-subtitle reveal">We bring the authentic taste of India to Copenhagen, prepared with purity of heart and hands.</p>
-    <div class="why-grid">
-      <div class="why-card reveal reveal-delay-1">
-        <div class="why-icon">🌿</div>
-        <div class="why-title">100% Satwik</div>
-        <p class="why-desc">Absolutely no onion, garlic, or tamasic ingredients. Pure Satwik food as prescribed in Vedic tradition, prepared in a clean and devotional environment.</p>
-      </div>
-      <div class="why-card reveal reveal-delay-2">
-        <div class="why-icon">🏠</div>
-        <div class="why-title">Homemade Quality</div>
-        <p class="why-desc">Every sweet is handcrafted with love in small batches. No factory production, no shortcuts — just the warmth and care of a home kitchen.</p>
-      </div>
-      <div class="why-card reveal reveal-delay-3">
-        <div class="why-icon">🙏</div>
-        <div class="why-title">Prepared with Devotion</div>
-        <p class="why-desc">Each sweet is prepared while chanting and in a devotional state of mind, offered first to Shree Radha Krishna before being shared with you.</p>
-      </div>
-      <div class="why-card reveal reveal-delay-4">
-        <div class="why-icon">🌺</div>
-        <div class="why-title">Authentic Recipes</div>
-        <p class="why-desc">Traditional recipes passed down through generations — from Kalakand to Sandesh, each preparation follows time-honoured methods and pure ingredients.</p>
-      </div>
+    <div class="section-eyebrow reveal" id="whyEyebrow">✦ Our Promise</div>
+    <h2 class="section-title reveal" id="whyTitle">Why Choose Us?</h2>
+    <p class="section-subtitle reveal" id="whySubtitle">We bring the authentic taste of India to Copenhagen, prepared with purity of heart and hands.</p>
+    <div class="why-grid" id="whyGrid">
+      <!-- Cards injected by JS from HomepageSections (Section=why_choose_us) -->
     </div>
   </div>
 </section>
@@ -1101,30 +1082,29 @@ body::before{
 <!-- ═══ MENU SECTION ═══ -->
 <section id="menu">
   <div class="container">
-    <div class="section-eyebrow reveal">🍬 Our Offerings</div>
-    <h2 class="section-title reveal">Our Sweet Menu</h2>
-    <p class="section-subtitle reveal">Handpicked authentic Satwik sweets prepared fresh with the finest ingredients. Each sweet is a celebration of Indian tradition.</p>
+    <div class="section-eyebrow reveal" id="menuEyebrow">🍬 Our Offerings</div>
+    <h2 class="section-title reveal" id="menuTitle">Our Products</h2>
+    <p class="section-subtitle reveal" id="menuSubtitle">Handpicked authentic Satwik products prepared and sourced with the finest care. Each item is a celebration of devotion and tradition.</p>
 
     <div class="menu-search reveal">
-      <input type="text" id="menuSearch" placeholder="Search sweets…" autocomplete="off"/>
+      <input type="text" id="menuSearch" placeholder="Search products…" autocomplete="off"/>
       <span class="menu-search-icon">🔍</span>
     </div>
 
-    <div class="menu-filters reveal">
-      <button class="filter-btn active" data-cat="all">🌟 All Sweets</button>
-      <button class="filter-btn" data-cat="milk">🥛 Pure Milk Sweets</button>
-      <button class="filter-btn" data-cat="fried">✨ Golden Fried Sweets</button>
-      <button class="filter-btn" data-cat="special">👑 Special Delicacies</button>
-      <button class="filter-btn" data-cat="ghee">🧈 Pure Ghee</button>
+    <div class="menu-filters reveal" id="menuFilters">
+      <!-- Category filter chips injected by JS -->
+    </div>
+    <div class="menu-filters reveal" id="menuSubFilters" style="margin-top:8px;">
+      <!-- Sub-category filter chips injected by JS (sweets only) -->
     </div>
 
     <div class="menu-grid" id="menuGrid">
       <!-- Cards injected by JS -->
     </div>
 
-    <div class="menu-note reveal" style="margin-top:28px;">
-      ⚠️ <strong>Note:</strong> Jalebi and Imarti are available with a minimum order of 4 pieces.
-      All sweets are prepared fresh — please order in advance. Contact us on WhatsApp for bulk/event orders.
+    <div class="menu-note reveal" id="menuNote" style="margin-top:28px;">
+      ⚠️ <strong>Note:</strong> Some items have minimum order quantities — see individual product notes.
+      All items are prepared/sourced fresh — please order in advance. Contact us on WhatsApp for bulk/event orders.
     </div>
   </div>
 </section>
@@ -1139,19 +1119,19 @@ body::before{
 <!-- ═══ ORDER SECTION ═══ -->
 <section id="order">
   <div class="container">
-    <div class="section-eyebrow reveal">📋 Place Your Order</div>
-    <h2 class="section-title reveal">Order Our Sweets</h2>
-    <p class="section-subtitle reveal">Select your sweets, add to cart, fill in your details, and we'll confirm your order. Fresh sweets prepared just for you!</p>
+    <div class="section-eyebrow reveal" id="orderEyebrow">📋 Place Your Order</div>
+    <h2 class="section-title reveal" id="orderTitle">Order Our Products</h2>
+    <p class="section-subtitle reveal" id="orderSubtitle">Select your items, add to cart, fill in your details, and we'll confirm your order. Fresh and authentic, just for you!</p>
 
     <div class="order-layout reveal">
       <!-- Left: Add items -->
       <div>
         <div class="order-panel">
-          <h3>🍬 Build Your Order</h3>
+          <h3>🛍️ Build Your Order</h3>
           <div class="form-group">
-            <label class="form-label" for="orderSelect">Select a Sweet</label>
+            <label class="form-label" for="orderSelect">Select a Product</label>
             <select class="form-control" id="orderSelect">
-              <option value="">— Choose a sweet —</option>
+              <option value="">— Choose a product —</option>
             </select>
           </div>
           <div class="order-item-row">
@@ -1163,10 +1143,11 @@ body::before{
               <label class="form-label" for="orderUnit">Unit</label>
               <select class="form-control" id="orderUnit">
                 <option value="pieces">Pieces</option>
-                <option value="grams">Grams</option>
-                <option value="kg">Kilogram</option>
               </select>
             </div>
+          </div>
+          <div class="order-item-row" id="orderVariantsRow" style="display:none;">
+            <!-- Informational variant selectors injected by JS (size/color/language etc.) -->
           </div>
           <button class="add-item-btn" style="margin-top:16px;" id="addToCartBtn">
             ＋ Add to Cart
@@ -1177,14 +1158,14 @@ body::before{
         <div class="order-panel" style="margin-top:20px;">
           <h3>🛒 Your Cart</h3>
           <div id="cartItems" class="cart-items">
-            <div class="cart-empty"><span>🛒</span>Your cart is empty.<br>Add some delicious sweets above!</div>
+            <div class="cart-empty"><span>🛒</span>Your cart is empty.<br>Add some items above!</div>
           </div>
           <div class="cart-totals" id="cartTotals" style="display:none;">
             <div class="cart-total-row">
               <span>Subtotal</span>
               <span id="subtotalVal">0 kr.</span>
             </div>
-            <div class="cart-total-row" style="font-size:0.78rem;color:var(--text-muted);">
+            <div class="cart-total-row" style="font-size:0.78rem;color:var(--text-muted);" id="deliveryNote">
               <span>Delivery / Pick-up info to be confirmed</span>
             </div>
             <div class="cart-total-row grand">
@@ -1226,7 +1207,7 @@ body::before{
             <input type="date" class="form-control" id="custDate"/>
           </div>
 
-          <div class="google-sheets-note">
+          <div class="google-sheets-note" id="privacyNote">
             <strong>🔒 Your data is safe.</strong> Order details will be saved securely and used only to process your order.
             A confirmation will be sent to your email / WhatsApp.
           </div>
@@ -1240,9 +1221,9 @@ body::before{
         <div class="order-success" id="orderSuccess">
           <div class="success-icon">🎉</div>
           <div class="success-title">Order Placed Successfully!</div>
-          <p class="success-msg">
+          <p class="success-msg" id="orderSuccessMsg">
             Thank you for your order. We have received your details and will confirm your order shortly via WhatsApp or email.
-            Your sweets will be prepared fresh with devotion — <em>Jai Shree Radhe!</em>
+            Jai Shree Radhe!
           </p>
           <div class="order-id-box">
             <div class="order-id-label">YOUR ORDER ID</div>
@@ -1260,43 +1241,11 @@ body::before{
 <!-- ═══ TESTIMONIALS ═══ -->
 <section id="testimonials">
   <div class="container">
-    <div class="section-eyebrow" style="color:var(--gold-light);">❤️ Community Love</div>
-    <h2 class="section-title" style="color:var(--white);">What Our Community Says</h2>
-    <p class="section-subtitle" style="color:rgba(255,248,220,0.65);">The joy of authentic Indian sweets in Copenhagen — straight from the heart.</p>
-    <div class="testimonials-grid">
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Unbelievable! The Kalakand tasted exactly like what my mother makes in Rajasthan. After years in Copenhagen, I finally found something that feels truly like home. Pure, authentic, and made with so much love."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">P</div>
-          <div>
-            <div class="testi-name">Priya Sharma</div>
-            <div class="testi-location">Indian Community, Copenhagen</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-delay-2">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"We ordered Sandesh and Rabri for Janmashtami puja. Everyone was amazed — so soft, so fresh, and truly Satwik. This initiative is such a blessing for our community. Jai Shree Radhe!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">R</div>
-          <div>
-            <div class="testi-name">Rahul & Pooja Mehta</div>
-            <div class="testi-location">ISKCON devotees, Copenhagen</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-delay-3">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"My Danish family tried the Mango Kalakand and they absolutely loved it! They couldn't believe something so delicious was homemade. I'm so grateful this shop exists — it brings a piece of India to Denmark."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">S</div>
-          <div>
-            <div class="testi-name">Sunita Patel</div>
-            <div class="testi-location">Frederiksberg, Copenhagen</div>
-          </div>
-        </div>
-      </div>
+    <div class="section-eyebrow" id="testiEyebrow" style="color:var(--gold-light);">❤️ Community Love</div>
+    <h2 class="section-title" id="testiTitle" style="color:var(--white);">What Our Community Says</h2>
+    <p class="section-subtitle" id="testiSubtitle" style="color:rgba(255,248,220,0.65);">The joy of authentic Satwik products in Copenhagen — straight from the heart.</p>
+    <div class="testimonials-grid" id="testimonialsGrid">
+      <!-- Cards injected by JS from HomepageSections (Section=testimonial) -->
     </div>
   </div>
 </section>
@@ -1313,15 +1262,14 @@ body::before{
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo-text">Shree Radha Krishna Sweets</div>
-        <div style="font-size:0.75rem;color:rgba(200,150,42,0.6);letter-spacing:1px;">COPENHAGEN · AUTHENTIC SATWIK</div>
-        <p>Bringing the pure taste of authentic Satwik Indian sweets to the Indian community in Copenhagen. Homemade with devotion, prepared in the tradition of Shree Radha Krishna.</p>
-        <div style="margin-top:14px;font-size:0.8rem;font-style:italic;color:rgba(200,150,42,0.6);">"Jai Shree Radhe Krishna" 🙏</div>
+        <div class="footer-logo-text" id="footerBrand">Spiritual Marketplace</div>
+        <div style="font-size:0.75rem;color:rgba(200,150,42,0.6);letter-spacing:1px;" id="footerTagline">COPENHAGEN · AUTHENTIC SATWIK</div>
+        <p id="footerDesc">Bringing authentic Satwik sweets, organic products, spiritual books, traditional clothing and deity items to the community in Copenhagen. Homemade and sourced with devotion.</p>
+        <div style="margin-top:14px;font-size:0.8rem;font-style:italic;color:rgba(200,150,42,0.6);" id="footerQuote">"Jai Shree Radhe Krishna" 🙏</div>
         <div class="footer-social">
-          <!-- TODO: Replace # with actual social media URLs -->
-          <a href="#" class="social-btn" title="WhatsApp">💬</a>
-          <a href="#" class="social-btn" title="Instagram">📸</a>
-          <a href="#" class="social-btn" title="Facebook">👍</a>
+          <a href="#" class="social-btn" id="socialWhatsapp" title="WhatsApp">💬</a>
+          <a href="#" class="social-btn" id="socialInstagram" title="Instagram" target="_blank">📸</a>
+          <a href="#" class="social-btn" id="socialFacebook" title="Facebook" target="_blank">👍</a>
         </div>
       </div>
       <div class="footer-col">
@@ -1329,7 +1277,7 @@ body::before{
         <ul>
           <li><a href="#hero">🏠 Home</a></li>
           <li><a href="#about">🙏 About Us</a></li>
-          <li><a href="#menu">🍬 Our Menu</a></li>
+          <li><a href="#menu">🍬 Our Products</a></li>
           <li><a href="#order">📋 Place an Order</a></li>
           <li><a href="#testimonials">❤️ Reviews</a></li>
         </ul>
@@ -1339,29 +1287,27 @@ body::before{
         <ul class="footer-contact">
           <li>
             <span>📍</span>
-            <span>Copenhagen, Denmark<br><small style="opacity:0.6;">Exact address shared upon order confirmation</small></span>
+            <span id="footerAddress">Copenhagen, Denmark<br><small style="opacity:0.6;">Exact address shared upon order confirmation</small></span>
           </li>
           <li>
-            <!-- TODO: Replace with actual WhatsApp number -->
             <span>💬</span>
-            <a href="https://wa.me/4500000000" style="color:rgba(255,248,220,0.75);">WhatsApp Us to Order</a>
+            <a href="https://wa.me/4500000000" id="footerWhatsapp" style="color:rgba(255,248,220,0.75);">WhatsApp Us to Order</a>
           </li>
           <li>
-            <!-- TODO: Replace with actual email -->
             <span>📧</span>
-            <a href="mailto:info@shreerklsweets.dk" style="color:rgba(255,248,220,0.75);">info@shreerklsweets.dk</a>
+            <a href="mailto:info@spiritualmarketplace.dk" id="footerEmail" style="color:rgba(255,248,220,0.75);">info@spiritualmarketplace.dk</a>
           </li>
           <li>
             <span>🕐</span>
-            <span>Order 48 hrs in advance<br><small style="opacity:0.6;">Fresh made for you</small></span>
+            <span id="footerHours">Order 48 hrs in advance<br><small style="opacity:0.6;">Fresh made for you</small></span>
           </li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Shree Radha Krishna Sweets, Copenhagen · All Rights Reserved · Made with <span>❤️</span> & Devotion</p>
-    <p style="margin-top:4px;">🌿 Pure Vegetarian &nbsp;|&nbsp; 🙏 Satwik &nbsp;|&nbsp; 🏠 Homemade &nbsp;|&nbsp; 🇮🇳 Authentic Indian</p>
+    <p id="footerCopyright">© 2025 Spiritual Marketplace, Copenhagen · All Rights Reserved · Made with <span>❤️</span> & Devotion</p>
+    <p style="margin-top:4px;" id="footerTaglineStrip">🌿 Pure Vegetarian &nbsp;|&nbsp; 🙏 Satwik &nbsp;|&nbsp; 🏠 Homemade &nbsp;|&nbsp; 🇮🇳 Authentic Indian</p>
   </div>
 </footer>
 
@@ -1370,8 +1316,7 @@ body::before{
   <button class="float-cart hidden-until-cart" id="floatCart" onclick="openCart()">
     🛒 &nbsp;Cart <span class="float-cart-count" id="floatCartCount">0</span>
   </button>
-  <a href="https://wa.me/4500000000" class="float-whatsapp" target="_blank" title="Order on WhatsApp">
-    <!-- TODO: Replace with actual WhatsApp number -->
+  <a href="https://wa.me/4500000000" class="float-whatsapp" id="floatWhatsapp" target="_blank" title="Order on WhatsApp">
     💬
   </a>
 </div>
@@ -1405,302 +1350,440 @@ body::before{
 /* ═══════════════════════════════════════════════════════════════════
    GOOGLE SHEETS INTEGRATION — CONFIGURE THIS SECTION
    ═══════════════════════════════════════════════════════════════════
-   STEP-BY-STEP SETUP:
-   1. Go to https://script.google.com → New Project
-   2. Paste the Google Apps Script code from the README
-   3. Click Deploy → New Deployment → Web App
-      - Execute as: Me (your Google account)
-      - Who has access: Anyone
-   4. Authorize and copy the Web App URL
-   5. Paste it below as GOOGLE_SCRIPT_URL
+   This single Apps Script Web App URL is used for TWO purposes:
+     1. GET  ?action=getConfig  → loads ALL site content (text, products,
+        categories, homepage sections, delivery/contact info) from the
+        Google Sheet on every page load.
+     2. POST (order payload)    → writes a new order into the "Orders" tab
+        (unchanged from the original implementation).
+
+   See /sheet/README.md for how to set up the Sheet + Apps Script.
    ═══════════════════════════════════════════════════════════════════ */
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysWuyYBWFDsqhn-EBnIZnciByMcFX8dyulqHc6uibNmaR97K8CIsgCSqNxaMOLE2L_/exec";
-/* ─── The Google Sheet where orders will land ─────────────────────
-   Get the ID from your Sheet URL:
-   https://docs.google.com/spreadsheets/d/ >>> SHEET_ID <<< /edit     */
 const GOOGLE_SHEET_ID  = "YOUR_GOOGLE_SHEET_ID_HERE";
-/* ─── Tab name inside the sheet ──────────────────────────────────── */
 const GOOGLE_SHEET_TAB = "Orders";
-/* ─── WhatsApp number (E.164 format, no spaces) ─────────────────── */
-const WHATSAPP_NUMBER  = "4500000000";   // TODO: Replace with actual number
-/* ─── Instagram / Facebook ──────────────────────────────────────── */
-const INSTAGRAM_URL    = "#";            // TODO: Replace with actual URL
-const FACEBOOK_URL     = "#";            // TODO: Replace with actual URL
-/* ═══════════════════════════════════════════════════════════════════ */
 
 /* ═══════════════════════════════════════════════════════════════════
-   MENU DATA  (sourced from Menu-Sweets.pdf — edit prices/items here)
+   DEFAULT CONFIG — used immediately on load and as a fallback if the
+   live Google Sheet config can't be reached. Mirrors the JSON shape
+   returned by GOOGLE_SCRIPT_URL?action=getConfig (see AppsScript-Code.gs)
 ═══════════════════════════════════════════════════════════════════ */
-const MENU = [
-  // ── Pure Milk Sweets ──────────────────────────────────────────
-  {
-    id:1, cat:"milk", name:"Milk Cake",
-    price:15, unit:"per piece",
-    desc:"A rich and dense Indian sweet with a beautifully granular texture and a deep caramelised flavour. A timeless classic, golden in colour and melt-in-the-mouth.",
-    emoji:"🟡", gradient:"linear-gradient(135deg,#F5DEB3,#C8922A)",
+const DEFAULT_CONFIG = {
+  Settings: {
+    site_name: "Spiritual Marketplace",
+    site_tagline: "Authentic Satwik Products — Sweets, Books, Deities & More",
+    meta_title: "Spiritual Marketplace — Satwik Sweets, Organic Products, Books, Clothing & Deity Items | Copenhagen",
+    meta_description: "Authentic Satwik products in Copenhagen — homemade sweets, organic foods, spiritual books, traditional clothing & deity items. Homemade with devotion. Order now.",
+    meta_keywords: "spiritual marketplace Copenhagen, Satwik products Denmark, Indian sweets Copenhagen, deity items, spiritual books, temple shop",
+    currency_symbol: "kr.",
+    established_year: "2025",
+    city: "Copenhagen",
+    nav_cta_text: "🛍️ Order Now",
+    hero_badge: "🙏 &nbsp;Satwik · Homemade · Pure Vegetarian",
+    hero_title_line1: "SPIRITUAL",
+    hero_title_line2: "Marketplace",
+    hero_subtitle1: "Authentic Satwik Products in Copenhagen",
+    hero_subtitle2: '"Homemade with Devotion · Traditional Taste · Pure Ingredients"',
+    hero_btn_primary_text: "🍬 Explore Products",
+    hero_btn_primary_link: "#menu",
+    hero_btn_secondary_text: "📋 Place an Order",
+    hero_btn_secondary_link: "#order",
+    hero_tags: "🌿 Pure Vegetarian|🙏 Satwik|🏠 Homemade|🌺 Prepared with Devotion|🇮🇳 Authentic Indian Style",
+    about_eyebrow: "🙏 Our Story",
+    about_title: 'A Beautiful Initiative<br><em style="font-style:italic;color:var(--saffron);">Born from Devotion</em>',
+    about_lead_quote: '"Where every product is a prayer, and every purchase carries a blessing."',
+    about_body_1: "We started Spiritual Marketplace with a simple but heartfelt vision — to bring authentic Satwik products to the Indian and spiritual community in Copenhagen. In Denmark, truly authentic homemade and devotional products are hard to find, and we saw this as an opportunity to serve our community with love and devotion.",
+    about_body_2: "Every item we offer — whether prepared in our kitchen or sourced with care — follows the Satwik tradition: no onion or garlic in our food items, no artificial preservatives, and each product chosen or made with devotion as a service to Shree Radha Krishna.",
+    about_badges: "🌿 100% Satwik|🏠 Homemade|🌸 Vegetarian|🙏 Made with Devotion|🇮🇳 Authentic Indian|✨ No Preservatives",
+    footer_brand_name: "Spiritual Marketplace",
+    footer_tagline: "COPENHAGEN · AUTHENTIC SATWIK",
+    footer_description: "Bringing authentic Satwik sweets, organic products, spiritual books, traditional clothing and deity items to the community in Copenhagen. Homemade and sourced with devotion.",
+    footer_quote: '"Jai Shree Radhe Krishna" 🙏',
+    footer_copyright: "© 2025 Spiritual Marketplace, Copenhagen · All Rights Reserved · Made with <span>❤️</span> & Devotion",
+    footer_tagline_strip: "🌿 Pure Vegetarian &nbsp;|&nbsp; 🙏 Satwik &nbsp;|&nbsp; 🏠 Homemade &nbsp;|&nbsp; 🇮🇳 Authentic Indian",
+    menu_note: "⚠️ <strong>Note:</strong> Some items have minimum order quantities — see individual product notes. All items are prepared/sourced fresh — please order in advance. Contact us on WhatsApp for bulk/event orders.",
+    order_success_message: "Thank you for your order. We have received your details and will confirm your order shortly via WhatsApp or email. Jai Shree Radhe!",
   },
-  {
-    id:2, cat:"milk", name:"Plain Kalakand",
-    price:15, unit:"per piece",
-    desc:"A soft, lightly grainy milk sweet celebrated for its rich, pure-milk flavour and delicate crumbly texture. Set to perfection and garnished with a hint of cardamom.",
-    emoji:"🤍", gradient:"linear-gradient(135deg,#FFF8E1,#E8C060)",
+  Delivery: {
+    delivery_areas: "Copenhagen K|Frederiksberg|Nørrebro|Østerbro",
+    delivery_charge: "30",
+    free_delivery_threshold: "300",
+    pickup_available: "TRUE",
+    pickup_address_note: "Exact address shared upon order confirmation",
+    advance_notice_hours: "48",
   },
-  {
-    id:3, cat:"milk", name:"Mango Kalakand",
-    price:20, unit:"per piece",
-    desc:"A soft, grainy Indian milk fudge made from solidified sweetened milk, infused with the luscious sweetness of ripe mango and beautifully garnished with pistachios.",
-    emoji:"🥭", gradient:"linear-gradient(135deg,#FFE082,#FF8F00)",
+  OrderSettings: {
+    enable_orders: "TRUE",
+    payment_methods: "Bank Transfer|MobilePay|Cash on Pickup",
+    collection_options: "Home Delivery|Self Pickup",
+    min_order_amount: "0",
+    order_id_prefix: "TS",
   },
-  {
-    id:4, cat:"milk", name:"Mango Kalakand with Rabri",
-    price:25, unit:"per piece",
-    desc:"An indulgent multi-textured delicacy — the grainy sweetness of Kalakand elevated by the creamy, aromatic richness of slow-cooked Rabri. A truly premium offering.",
-    emoji:"🥭", gradient:"linear-gradient(135deg,#FFB74D,#E65100)",
+  Contact: {
+    contact_name: "Spiritual Marketplace Team",
+    phone: "+45 XX XX XX XX",
+    email: "info@spiritualmarketplace.dk",
+    whatsapp_number: "4500000000",
+    instagram_url: "#",
+    facebook_url: "#",
+    address: "Copenhagen, Denmark",
   },
-  {
-    id:5, cat:"milk", name:"Raspberry Kalakand",
-    price:20, unit:"per piece",
-    desc:"A soft and delicate milk fudge with the beautiful tartness of fresh raspberries woven through every bite, garnished with pistachios for colour and crunch.",
-    emoji:"🫐", gradient:"linear-gradient(135deg,#F8BBD0,#C2185B)",
-  },
-  {
-    id:6, cat:"milk", name:"Strawberry Kalakand",
-    price:20, unit:"per piece",
-    desc:"A blush-pink, melt-in-the-mouth milk sweet with the bright freshness of strawberries. A delightful fusion of traditional Indian technique with a fruity Scandinavian twist.",
-    emoji:"🍓", gradient:"linear-gradient(135deg,#FFCDD2,#E53935)",
-  },
-  {
-    id:7, cat:"milk", name:"Sandesh",
-    price:12, unit:"per piece",
-    desc:"The iconic Bengali milk sweet — soft, delicate, and subtly flavoured with cardamom, saffron, or rose water. Crafted from fresh chenna for an ethereally light texture.",
-    emoji:"🌸", gradient:"linear-gradient(135deg,#FFF9C4,#F9A825)",
-  },
-  {
-    id:8, cat:"milk", name:"Butterscotch Sandesh",
-    price:20, unit:"per piece",
-    desc:"A delightful East-meets-West fusion — the beloved Bengali Sandesh given a luxurious butterscotch character, delivering deep caramel warmth in every silky bite.",
-    emoji:"🍮", gradient:"linear-gradient(135deg,#FFE082,#FF8F00)",
-  },
-  {
-    id:9, cat:"milk", name:"Jolbhora Sandesh",
-    price:25, unit:"per piece",
-    desc:"A masterpiece of Bengali confectionery — a smooth, firm Sandesh shell concealing a surprising burst of sweet liquid jol inside. Elegant, theatrical, and utterly delicious.",
-    emoji:"💎", gradient:"linear-gradient(135deg,#E1BEE7,#8E24AA)",
-  },
-  {
-    id:10, cat:"milk", name:"Baked Sandesh",
-    price:20, unit:"per piece",
-    desc:"Dense, smooth and melt-in-the-mouth — our Baked Sandesh has the character of a refined soft fudge, with a gently set top and an intensely rich milk flavour throughout.",
-    emoji:"✨", gradient:"linear-gradient(135deg,#FFCC80,#E65100)",
-  },
-  {
-    id:11, cat:"milk", name:"Rabri",
-    price:40, unit:"per portion (200–250g)",
-    desc:"Slow-simmered full-fat milk reduced to a luscious, creamy thickened sweetness, layered with delicate malai folds. Perfumed with cardamom and saffron — pure liquid luxury.",
-    emoji:"🥛", gradient:"linear-gradient(135deg,#FFF3E0,#FFB300)",
-  },
-  {
-    id:12, cat:"milk", name:"Mango Rabri",
-    price:45, unit:"per portion (200–250g)",
-    desc:"All the velvety richness of our traditional Rabri elevated with the fragrant sweetness of ripe Alphonso mangoes. A heavenly combination that tastes of Indian summers.",
-    emoji:"🥭", gradient:"linear-gradient(135deg,#FFE57F,#FF6D00)",
-  },
-  {
-    id:13, cat:"milk", name:"Mathura Peda",
-    price:20, unit:"per piece",
-    desc:"The revered sweet of Mathura — birthplace of Lord Krishna. A traditional danedar Peda made from condensed khoya, subtly spiced with cardamom and carrying the divine aroma of Braj.",
-    emoji:"🟠", gradient:"linear-gradient(135deg,#FFE0B2,#BF360C)",
-  },
-  // ── Golden Fried Sweets ──────────────────────────────────────
-  {
-    id:14, cat:"fried", name:"Suryakala",
-    price:25, unit:"per piece",
-    desc:"A sun-shaped deep-fried pastry of maida, stuffed generously with a sweet khoya and dry-fruit mixture, then steeped in aromatic sugar syrup until it glistens like gold.",
-    emoji:"☀️", gradient:"linear-gradient(135deg,#FFF176,#F9A825)",
-  },
-  {
-    id:15, cat:"fried", name:"Khaja",
-    price:15, unit:"per piece",
-    desc:"A flaky, multi-layered pastry of regal heritage — crisped to golden perfection in pure ghee and soaked in fragrant sugar syrup, delivering a royal melt-in-the-mouth experience.",
-    emoji:"🥐", gradient:"linear-gradient(135deg,#FFD54F,#F57F17)",
-  },
-  {
-    id:16, cat:"fried", name:"Malpua with Rabri",
-    price:20, unit:"per piece",
-    desc:"Soft, pillowy deep-fried Indian pancakes soaked in fragrant sugar syrup, served with our rich house-made Rabri. A cherished festive sweet, comforting in every single bite.",
-    emoji:"🥞", gradient:"linear-gradient(135deg,#FFAB91,#BF360C)",
-  },
-  {
-    id:17, cat:"fried", name:"Jalebi",
-    price:10, unit:"per piece (min. 4 pcs)",
-    desc:"The beloved golden spiral — crisp, hot, and dripping with saffron-infused sugar syrup. Perfectly fermented batter fried to an addictive crunch, with a burst of sweet juice inside.",
-    emoji:"🌀", gradient:"linear-gradient(135deg,#FFD700,#FF8C00)",
-    note:"Minimum order: 4 pieces"
-  },
-  {
-    id:18, cat:"fried", name:"Imarti",
-    price:15, unit:"per piece (min. 4 pcs)",
-    desc:"The regal cousin of the Jalebi — made from urad dal batter piped in an intricate flower pattern, deep-fried to a soft-yet-crispy texture, and dipped in cardamom sugar syrup.",
-    emoji:"🌸", gradient:"linear-gradient(135deg,#FFB74D,#E65100)",
-    note:"Minimum order: 4 pieces"
-  },
-  {
-    id:19, cat:"fried", name:"Rasabali",
-    price:15, unit:"per piece",
-    desc:"A festive sweet from the temples of Odisha — flat-fried chenna patties soaked in reduced, sweetened milk flavoured with cardamom and saffron. A divine Orissan temple offering.",
-    emoji:"🌿", gradient:"linear-gradient(135deg,#FFB74D,#D84315)",
-  },
-  // ── Special Delicacies ────────────────────────────────────────
-  {
-    id:20, cat:"special", name:"Ghevar with Rabri",
-    price:45, unit:"per piece",
-    desc:"A Rajasthani festive masterpiece — a disc of honeycomb-like fried batter crowned with our silky Rabri and scattered with dry fruits. Luxuriously indulgent and visually spectacular.",
-    emoji:"🍯", gradient:"linear-gradient(135deg,#FFF8E1,#FF8F00)",
-  },
-  {
-    id:21, cat:"special", name:"Baked Mihidana Tart",
-    price:25, unit:"per piece",
-    desc:"A stunning East-meets-West innovation — a golden French-style tart shell filled with Bengal's famed Mihidana (tiny saffron boondi), creating a unique and irresistible fusion delicacy.",
-    emoji:"🥧", gradient:"linear-gradient(135deg,#F3E5AB,#8B6914)",
-  },
-  {
-    id:22, cat:"special", name:"Baked Kheer Roll",
-    price:25, unit:"per piece",
-    desc:"A creative reimagining of the classic Kheer — rolled into an elegant log, baked to set its form, and served as an individual portion. Traditional taste in a modern, beautiful presentation.",
-    emoji:"🎂", gradient:"linear-gradient(135deg,#E8D5B7,#6D4C41)",
-  },
-  // ── Pure Ghee ─────────────────────────────────────────────────
-  {
-    id:23, cat:"ghee", name:"Fresh Organic Ghee",
-    price:150, unit:"per kg", cartUnit:"kg",
-    desc:"Pure, golden, hand-churned organic ghee — slow-simmered from the finest milk until rich, nutty and beautifully aromatic. A wholesome Satwik essential for cooking, sweets, and daily nourishment.",
-    emoji:"🧈", gradient:"linear-gradient(135deg,#FFE9A8,#C8962A)",
-  },
-];
+  HomepageSections: [
+    { Section:"why_choose_us", ItemID:"why_1", Icon:"🌿", Title:"100% Satwik", Description:"Absolutely no onion, garlic, or tamasic ingredients. Pure Satwik food as prescribed in Vedic tradition, prepared in a clean and devotional environment.", DisplayOrder:1, Active:true },
+    { Section:"why_choose_us", ItemID:"why_2", Icon:"🏠", Title:"Homemade Quality", Description:"Every product is handcrafted with love in small batches. No factory production, no shortcuts — just the warmth and care of a home kitchen.", DisplayOrder:2, Active:true },
+    { Section:"why_choose_us", ItemID:"why_3", Icon:"🙏", Title:"Prepared with Devotion", Description:"Each item is prepared while chanting and in a devotional state of mind, offered first to Shree Radha Krishna before being shared with you.", DisplayOrder:3, Active:true },
+    { Section:"why_choose_us", ItemID:"why_4", Icon:"🌺", Title:"Authentic & Traditional", Description:"Traditional recipes and authentic products passed down through generations — each item follows time-honoured methods and pure ingredients.", DisplayOrder:4, Active:true },
+    { Section:"testimonial", ItemID:"testi_1", Title:"\"Unbelievable! The Kalakand tasted exactly like what my mother makes in Rajasthan. After years in Copenhagen, I finally found something that feels truly like home. Pure, authentic, and made with so much love.\"", AuthorName:"Priya Sharma", AuthorLocation:"Indian Community, Copenhagen", AuthorInitial:"P", Rating:5, DisplayOrder:1, Active:true },
+    { Section:"testimonial", ItemID:"testi_2", Title:"\"We ordered Sandesh and Rabri for Janmashtami puja. Everyone was amazed — so soft, so fresh, and truly Satwik. This initiative is such a blessing for our community. Jai Shree Radhe!\"", AuthorName:"Rahul & Pooja Mehta", AuthorLocation:"ISKCON devotees, Copenhagen", AuthorInitial:"R", Rating:5, DisplayOrder:2, Active:true },
+    { Section:"testimonial", ItemID:"testi_3", Title:"\"My Danish family tried the Mango Kalakand and they absolutely loved it! They couldn't believe something so delicious was homemade. I'm so grateful this shop exists — it brings a piece of India to Denmark.\"", AuthorName:"Sunita Patel", AuthorLocation:"Frederiksberg, Copenhagen", AuthorInitial:"S", Rating:5, DisplayOrder:3, Active:true },
+  ],
+  Categories: [
+    { CategoryID:"sweets",   Name:"Sweets",                Icon:"🍬", FilterLabel:"🍬 Sweets",              UnitTypes:"pieces,grams,kg", DisplayOrder:1, Active:true },
+    { CategoryID:"organic",  Name:"Organic Products",      Icon:"🌿", FilterLabel:"🌿 Organic Products",    UnitTypes:"pieces,grams,kg", DisplayOrder:2, Active:true },
+    { CategoryID:"books",    Name:"Books",                 Icon:"📚", FilterLabel:"📚 Books",               UnitTypes:"pieces",          DisplayOrder:3, Active:true },
+    { CategoryID:"clothing", Name:"Traditional Clothing",  Icon:"👘", FilterLabel:"👘 Clothing",            UnitTypes:"pieces",          DisplayOrder:4, Active:true },
+    { CategoryID:"deity",    Name:"Deity & Worship Items", Icon:"🛕", FilterLabel:"🛕 Deity & Worship",     UnitTypes:"pieces",          DisplayOrder:5, Active:true },
+  ],
+  SubCategories: [
+    { CategoryID:"sweets", SubCategoryID:"all",     Label:"🌟 All Sweets",          DisplayOrder:0, Active:true },
+    { CategoryID:"sweets", SubCategoryID:"milk",    Label:"🥛 Pure Milk Sweets",    DisplayOrder:1, Active:true },
+    { CategoryID:"sweets", SubCategoryID:"fried",   Label:"✨ Golden Fried Sweets", DisplayOrder:2, Active:true },
+    { CategoryID:"sweets", SubCategoryID:"special", Label:"👑 Special Delicacies", DisplayOrder:3, Active:true },
+    { CategoryID:"sweets", SubCategoryID:"ghee",    Label:"🧈 Pure Ghee",           DisplayOrder:4, Active:true },
+  ],
+  Products: [
+    { ProductID:1,  CategoryID:"sweets", SubCategory:"milk",   Name:"Milk Cake", Description:"A rich and dense Indian sweet with a beautifully granular texture and a deep caramelised flavour. A timeless classic, golden in colour and melt-in-the-mouth.", Price:15, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🟡", ImageURL:"", GradientStart:"#F5DEB3", GradientEnd:"#C8922A", Variants:"", Note:"", DisplayOrder:1, Active:true },
+    { ProductID:2,  CategoryID:"sweets", SubCategory:"milk",   Name:"Plain Kalakand", Description:"A soft, lightly grainy milk sweet celebrated for its rich, pure-milk flavour and delicate crumbly texture. Set to perfection and garnished with a hint of cardamom.", Price:15, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🤍", ImageURL:"", GradientStart:"#FFF8E1", GradientEnd:"#E8C060", Variants:"", Note:"", DisplayOrder:2, Active:true },
+    { ProductID:3,  CategoryID:"sweets", SubCategory:"milk",   Name:"Mango Kalakand", Description:"A soft, grainy Indian milk fudge made from solidified sweetened milk, infused with the luscious sweetness of ripe mango and beautifully garnished with pistachios.", Price:20, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🥭", ImageURL:"", GradientStart:"#FFE082", GradientEnd:"#FF8F00", Variants:"", Note:"", DisplayOrder:3, Active:true },
+    { ProductID:4,  CategoryID:"sweets", SubCategory:"milk",   Name:"Mango Kalakand with Rabri", Description:"An indulgent multi-textured delicacy — the grainy sweetness of Kalakand elevated by the creamy, aromatic richness of slow-cooked Rabri. A truly premium offering.", Price:25, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🥭", ImageURL:"", GradientStart:"#FFB74D", GradientEnd:"#E65100", Variants:"", Note:"", DisplayOrder:4, Active:true },
+    { ProductID:5,  CategoryID:"sweets", SubCategory:"milk",   Name:"Raspberry Kalakand", Description:"A soft and delicate milk fudge with the beautiful tartness of fresh raspberries woven through every bite, garnished with pistachios for colour and crunch.", Price:20, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🫐", ImageURL:"", GradientStart:"#F8BBD0", GradientEnd:"#C2185B", Variants:"", Note:"", DisplayOrder:5, Active:true },
+    { ProductID:6,  CategoryID:"sweets", SubCategory:"milk",   Name:"Strawberry Kalakand", Description:"A blush-pink, melt-in-the-mouth milk sweet with the bright freshness of strawberries. A delightful fusion of traditional Indian technique with a fruity Scandinavian twist.", Price:20, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🍓", ImageURL:"", GradientStart:"#FFCDD2", GradientEnd:"#E53935", Variants:"", Note:"", DisplayOrder:6, Active:true },
+    { ProductID:7,  CategoryID:"sweets", SubCategory:"milk",   Name:"Sandesh", Description:"The iconic Bengali milk sweet — soft, delicate, and subtly flavoured with cardamom, saffron, or rose water. Crafted from fresh chenna for an ethereally light texture.", Price:12, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🌸", ImageURL:"", GradientStart:"#FFF9C4", GradientEnd:"#F9A825", Variants:"", Note:"", DisplayOrder:7, Active:true },
+    { ProductID:8,  CategoryID:"sweets", SubCategory:"milk",   Name:"Butterscotch Sandesh", Description:"A delightful East-meets-West fusion — the beloved Bengali Sandesh given a luxurious butterscotch character, delivering deep caramel warmth in every silky bite.", Price:20, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🍮", ImageURL:"", GradientStart:"#FFE082", GradientEnd:"#FF8F00", Variants:"", Note:"", DisplayOrder:8, Active:true },
+    { ProductID:9,  CategoryID:"sweets", SubCategory:"milk",   Name:"Jolbhora Sandesh", Description:"A masterpiece of Bengali confectionery — a smooth, firm Sandesh shell concealing a surprising burst of sweet liquid jol inside. Elegant, theatrical, and utterly delicious.", Price:25, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"💎", ImageURL:"", GradientStart:"#E1BEE7", GradientEnd:"#8E24AA", Variants:"", Note:"", DisplayOrder:9, Active:true },
+    { ProductID:10, CategoryID:"sweets", SubCategory:"milk",   Name:"Baked Sandesh", Description:"Dense, smooth and melt-in-the-mouth — our Baked Sandesh has the character of a refined soft fudge, with a gently set top and an intensely rich milk flavour throughout.", Price:20, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"✨", ImageURL:"", GradientStart:"#FFCC80", GradientEnd:"#E65100", Variants:"", Note:"", DisplayOrder:10, Active:true },
+    { ProductID:11, CategoryID:"sweets", SubCategory:"milk",   Name:"Rabri", Description:"Slow-simmered full-fat milk reduced to a luscious, creamy thickened sweetness, layered with delicate malai folds. Perfumed with cardamom and saffron — pure liquid luxury.", Price:40, UnitLabel:"per portion (200–250g)", AvailableUnits:"pieces,grams,kg", Emoji:"🥛", ImageURL:"", GradientStart:"#FFF3E0", GradientEnd:"#FFB300", Variants:"", Note:"", DisplayOrder:11, Active:true },
+    { ProductID:12, CategoryID:"sweets", SubCategory:"milk",   Name:"Mango Rabri", Description:"All the velvety richness of our traditional Rabri elevated with the fragrant sweetness of ripe Alphonso mangoes. A heavenly combination that tastes of Indian summers.", Price:45, UnitLabel:"per portion (200–250g)", AvailableUnits:"pieces,grams,kg", Emoji:"🥭", ImageURL:"", GradientStart:"#FFE57F", GradientEnd:"#FF6D00", Variants:"", Note:"", DisplayOrder:12, Active:true },
+    { ProductID:13, CategoryID:"sweets", SubCategory:"milk",   Name:"Mathura Peda", Description:"The revered sweet of Mathura — birthplace of Lord Krishna. A traditional danedar Peda made from condensed khoya, subtly spiced with cardamom and carrying the divine aroma of Braj.", Price:20, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🟠", ImageURL:"", GradientStart:"#FFE0B2", GradientEnd:"#BF360C", Variants:"", Note:"", DisplayOrder:13, Active:true },
+    { ProductID:14, CategoryID:"sweets", SubCategory:"fried",  Name:"Suryakala", Description:"A sun-shaped deep-fried pastry of maida, stuffed generously with a sweet khoya and dry-fruit mixture, then steeped in aromatic sugar syrup until it glistens like gold.", Price:25, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"☀️", ImageURL:"", GradientStart:"#FFF176", GradientEnd:"#F9A825", Variants:"", Note:"", DisplayOrder:14, Active:true },
+    { ProductID:15, CategoryID:"sweets", SubCategory:"fried",  Name:"Khaja", Description:"A flaky, multi-layered pastry of regal heritage — crisped to golden perfection in pure ghee and soaked in fragrant sugar syrup, delivering a royal melt-in-the-mouth experience.", Price:15, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🥐", ImageURL:"", GradientStart:"#FFD54F", GradientEnd:"#F57F17", Variants:"", Note:"", DisplayOrder:15, Active:true },
+    { ProductID:16, CategoryID:"sweets", SubCategory:"fried",  Name:"Malpua with Rabri", Description:"Soft, pillowy deep-fried Indian pancakes soaked in fragrant sugar syrup, served with our rich house-made Rabri. A cherished festive sweet, comforting in every single bite.", Price:20, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🥞", ImageURL:"", GradientStart:"#FFAB91", GradientEnd:"#BF360C", Variants:"", Note:"", DisplayOrder:16, Active:true },
+    { ProductID:17, CategoryID:"sweets", SubCategory:"fried",  Name:"Jalebi", Description:"The beloved golden spiral — crisp, hot, and dripping with saffron-infused sugar syrup. Perfectly fermented batter fried to an addictive crunch, with a burst of sweet juice inside.", Price:10, UnitLabel:"per piece (min. 4 pcs)", AvailableUnits:"pieces,grams,kg", Emoji:"🌀", ImageURL:"", GradientStart:"#FFD700", GradientEnd:"#FF8C00", Variants:"", Note:"Minimum order: 4 pieces", DisplayOrder:17, Active:true },
+    { ProductID:18, CategoryID:"sweets", SubCategory:"fried",  Name:"Imarti", Description:"The regal cousin of the Jalebi — made from urad dal batter piped in an intricate flower pattern, deep-fried to a soft-yet-crispy texture, and dipped in cardamom sugar syrup.", Price:15, UnitLabel:"per piece (min. 4 pcs)", AvailableUnits:"pieces,grams,kg", Emoji:"🌸", ImageURL:"", GradientStart:"#FFB74D", GradientEnd:"#E65100", Variants:"", Note:"Minimum order: 4 pieces", DisplayOrder:18, Active:true },
+    { ProductID:19, CategoryID:"sweets", SubCategory:"fried",  Name:"Rasabali", Description:"A festive sweet from the temples of Odisha — flat-fried chenna patties soaked in reduced, sweetened milk flavoured with cardamom and saffron. A divine Orissan temple offering.", Price:15, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🌿", ImageURL:"", GradientStart:"#FFB74D", GradientEnd:"#D84315", Variants:"", Note:"", DisplayOrder:19, Active:true },
+    { ProductID:20, CategoryID:"sweets", SubCategory:"special",Name:"Ghevar with Rabri", Description:"A Rajasthani festive masterpiece — a disc of honeycomb-like fried batter crowned with our silky Rabri and scattered with dry fruits. Luxuriously indulgent and visually spectacular.", Price:45, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🍯", ImageURL:"", GradientStart:"#FFF8E1", GradientEnd:"#FF8F00", Variants:"", Note:"", DisplayOrder:20, Active:true },
+    { ProductID:21, CategoryID:"sweets", SubCategory:"special",Name:"Baked Mihidana Tart", Description:"A stunning East-meets-West innovation — a golden French-style tart shell filled with Bengal's famed Mihidana (tiny saffron boondi), creating a unique and irresistible fusion delicacy.", Price:25, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🥧", ImageURL:"", GradientStart:"#F3E5AB", GradientEnd:"#8B6914", Variants:"", Note:"", DisplayOrder:21, Active:true },
+    { ProductID:22, CategoryID:"sweets", SubCategory:"special",Name:"Baked Kheer Roll", Description:"A creative reimagining of the classic Kheer — rolled into an elegant log, baked to set its form, and served as an individual portion. Traditional taste in a modern, beautiful presentation.", Price:25, UnitLabel:"per piece", AvailableUnits:"pieces,grams,kg", Emoji:"🎂", ImageURL:"", GradientStart:"#E8D5B7", GradientEnd:"#6D4C41", Variants:"", Note:"", DisplayOrder:22, Active:true },
+    { ProductID:23, CategoryID:"sweets", SubCategory:"ghee",   Name:"Fresh Organic Ghee", Description:"Pure, golden, hand-churned organic ghee — slow-simmered from the finest milk until rich, nutty and beautifully aromatic. A wholesome Satwik essential for cooking, sweets, and daily nourishment.", Price:150, UnitLabel:"per kg", AvailableUnits:"kg,grams", Emoji:"🧈", ImageURL:"", GradientStart:"#FFE9A8", GradientEnd:"#C8962A", Variants:"", Note:"", DisplayOrder:23, Active:true },
+    { ProductID:101, CategoryID:"organic", SubCategory:"ghee",  Name:"Organic Cow Ghee", Description:"Pure, hand-churned organic cow ghee — a Satwik kitchen essential, rich in aroma and nutrition.", Price:120, UnitLabel:"per 500g jar", AvailableUnits:"grams,kg", Emoji:"🧈", ImageURL:"", GradientStart:"#FFE9A8", GradientEnd:"#C8962A", Variants:"", Note:"", DisplayOrder:1, Active:true },
+    { ProductID:102, CategoryID:"organic", SubCategory:"honey", Name:"Raw Forest Honey", Description:"Unprocessed raw forest honey, naturally sweet and rich in minerals.", Price:80, UnitLabel:"per 250g jar", AvailableUnits:"grams", Emoji:"🍯", ImageURL:"", GradientStart:"#FFF3E0", GradientEnd:"#FFB300", Variants:"", Note:"", DisplayOrder:2, Active:true },
+    { ProductID:201, CategoryID:"books", SubCategory:"", Name:"Bhagavad Gita As It Is", Description:"The timeless spiritual classic, with original Sanskrit text, translation and commentary.", Price:150, UnitLabel:"per copy", AvailableUnits:"pieces", Emoji:"📖", ImageURL:"", GradientStart:"#FFF8E1", GradientEnd:"#C8962A", Variants:"Language:English,Hindi,Bengali", Note:"", DisplayOrder:1, Active:true },
+    { ProductID:202, CategoryID:"books", SubCategory:"", Name:"Srimad Bhagavatam Set", Description:"The complete set of Srimad Bhagavatam — a treasury of Vedic wisdom and devotional stories.", Price:1200, UnitLabel:"per set", AvailableUnits:"pieces", Emoji:"📚", ImageURL:"", GradientStart:"#E8D5B7", GradientEnd:"#6D4C41", Variants:"Language:English,Hindi", Note:"", DisplayOrder:2, Active:true },
+    { ProductID:301, CategoryID:"clothing", SubCategory:"mens", Name:"Cotton Kurta", Description:"Soft, breathable cotton kurta — comfortable for daily wear or temple visits.", Price:250, UnitLabel:"per piece", AvailableUnits:"pieces", Emoji:"👕", ImageURL:"", GradientStart:"#FFF8E1", GradientEnd:"#D4600A", Variants:"Size:S,M,L,XL|Color:White,Saffron,Maroon", Note:"", DisplayOrder:1, Active:true },
+    { ProductID:302, CategoryID:"clothing", SubCategory:"womens", Name:"Cotton Saree", Description:"Traditional handwoven cotton saree, elegant and comfortable.", Price:350, UnitLabel:"per piece", AvailableUnits:"pieces", Emoji:"🥻", ImageURL:"", GradientStart:"#F8BBD0", GradientEnd:"#921C30", Variants:"Color:Red,Yellow,Green", Note:"", DisplayOrder:2, Active:true },
+    { ProductID:401, CategoryID:"deity", SubCategory:"", Name:"Radha Krishna Deity Set", Description:"Beautifully crafted Radha Krishna deity set for home or temple worship.", Price:800, UnitLabel:"per set", AvailableUnits:"pieces", Emoji:"🛕", ImageURL:"", GradientStart:"#E1BEE7", GradientEnd:"#8E24AA", Variants:"Size:6 inch,9 inch,12 inch", Note:"", DisplayOrder:1, Active:true },
+    { ProductID:402, CategoryID:"deity", SubCategory:"", Name:"Sandalwood Incense Sticks", Description:"Fragrant sandalwood incense sticks for daily worship and meditation.", Price:40, UnitLabel:"per pack", AvailableUnits:"pieces", Emoji:"🪔", ImageURL:"", GradientStart:"#FFE0B2", GradientEnd:"#BF360C", Variants:"", Note:"", DisplayOrder:2, Active:true },
+  ],
+};
 
 /* ═══════════════════════════════════════════════════════════════════
-   CART STATE
+   STATE
 ═══════════════════════════════════════════════════════════════════ */
+let CONFIG = DEFAULT_CONFIG;
+let PRODUCTS = [];
 let cart = [];
-let currentFilter = "all";
+let currentCategory = "all";
+let currentSubCategory = "all";
 let searchQuery = "";
 
 /* ═══════════════════════════════════════════════════════════════════
-   LOADING SCREEN
+   HELPERS
 ═══════════════════════════════════════════════════════════════════ */
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("loading").classList.add("hidden");
-    createPetals();
-    initReveal();
-  }, 900);
-});
-
-/* ═══════════════════════════════════════════════════════════════════
-   FLOATING PETALS
-═══════════════════════════════════════════════════════════════════ */
-function createPetals() {
-  const hero = document.getElementById("hero");
-  for (let i = 0; i < 18; i++) {
-    const p = document.createElement("div");
-    p.className = "petal";
-    const size = 6 + Math.random() * 10;
-    p.style.cssText = `
-      width:${size}px;height:${size}px;
-      left:${Math.random() * 100}%;
-      top:${100 + Math.random() * 20}%;
-      animation-duration:${6 + Math.random() * 10}s;
-      animation-delay:${Math.random() * 8}s;
-      opacity:${0.2 + Math.random() * 0.4};
-      background:rgba(${Math.random()>.5?'200,150,42':'232,119,30'},0.3);
-      border-radius:${Math.random()>.5?'50%':'40% 0'};
-    `;
-    hero.appendChild(p);
+function isTrue(v) {
+  return v === true || v === "TRUE" || v === "true" || v === 1 || v === "1";
+}
+function unitLabelFor(u) {
+  return { pieces:"Pieces", grams:"Grams", kg:"Kilogram" }[u] || (u.charAt(0).toUpperCase()+u.slice(1));
+}
+// "Size:S,M,L,XL|Color:White,Saffron" -> [{label:"Size",options:["S","M","L","XL"]}, ...]
+function parseVariants(str) {
+  if (!str) return [];
+  return str.split("|").filter(Boolean).map(group => {
+    const [label, opts] = group.split(":");
+    return { label: (label||"").trim(), options: (opts||"").split(",").map(o=>o.trim()).filter(Boolean) };
+  });
+}
+function categoryByID(id) {
+  return CONFIG.Categories.find(c => c.CategoryID === id);
+}
+function subCategoryLabel(catId, subId) {
+  const s = CONFIG.SubCategories.find(x => x.CategoryID === catId && x.SubCategoryID === subId);
+  if (!s) return null;
+  return s.Label.replace(/^\S+\s+/, ""); // strip leading emoji
+}
+function cardBadgeText(p) {
+  if (p.SubCategory) {
+    const lbl = subCategoryLabel(p.CategoryID, p.SubCategory);
+    if (lbl) return lbl;
   }
+  const c = categoryByID(p.CategoryID);
+  return c ? c.Name : p.CategoryID;
+}
+function currency() {
+  return (CONFIG.Settings.currency_symbol || "kr.");
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   NAVIGATION
+   LOAD CONFIG (Google Sheet) — falls back to DEFAULT_CONFIG on failure
 ═══════════════════════════════════════════════════════════════════ */
-const nav = document.getElementById("nav");
-const hamburger = document.getElementById("hamburger");
-const navMobile = document.getElementById("navMobile");
-
-window.addEventListener("scroll", () => {
-  nav.classList.toggle("scrolled", window.scrollY > 50);
-});
-
-hamburger.addEventListener("click", () => {
-  navMobile.classList.toggle("open");
-});
-
-document.querySelectorAll("#navMobile a").forEach(a => {
-  a.addEventListener("click", () => navMobile.classList.remove("open"));
-});
+async function loadConfig() {
+  if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE") {
+    try {
+      const res = await fetch(GOOGLE_SCRIPT_URL + "?action=getConfig");
+      const data = await res.json();
+      if (data && data.Settings && data.Products) {
+        // Merge over defaults so a partially-filled sheet doesn't break the site
+        CONFIG = {
+          Settings: Object.assign({}, DEFAULT_CONFIG.Settings, data.Settings),
+          Delivery: Object.assign({}, DEFAULT_CONFIG.Delivery, data.Delivery),
+          OrderSettings: Object.assign({}, DEFAULT_CONFIG.OrderSettings, data.OrderSettings),
+          Contact: Object.assign({}, DEFAULT_CONFIG.Contact, data.Contact),
+          HomepageSections: (data.HomepageSections && data.HomepageSections.length) ? data.HomepageSections : DEFAULT_CONFIG.HomepageSections,
+          Categories: (data.Categories && data.Categories.length) ? data.Categories : DEFAULT_CONFIG.Categories,
+          SubCategories: (data.SubCategories && data.SubCategories.length) ? data.SubCategories : DEFAULT_CONFIG.SubCategories,
+          Products: (data.Products && data.Products.length) ? data.Products : DEFAULT_CONFIG.Products,
+        };
+      }
+    } catch (err) {
+      console.warn("Could not load live config from Google Sheets — using built-in defaults.", err);
+    }
+  }
+  applyConfig();
+}
 
 /* ═══════════════════════════════════════════════════════════════════
-   REVEAL ON SCROLL
+   APPLY CONFIG — populate every dynamic part of the page
 ═══════════════════════════════════════════════════════════════════ */
-function initReveal() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
-  }, { threshold: 0.12 });
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+function applyConfig() {
+  const S = CONFIG.Settings, D = CONFIG.Delivery, C = CONFIG.Contact;
+
+  // Normalize products
+  PRODUCTS = CONFIG.Products
+    .filter(p => isTrue(p.Active))
+    .map(p => ({
+      ...p,
+      ProductID: Number(p.ProductID),
+      Price: Number(p.Price) || 0,
+      AvailableUnits: String(p.AvailableUnits || "pieces").split(",").map(u=>u.trim()).filter(Boolean),
+      VariantGroups: parseVariants(p.Variants),
+      DisplayOrder: Number(p.DisplayOrder) || 0,
+    }))
+    .sort((a,b) => a.DisplayOrder - b.DisplayOrder);
+
+  // ── Head / meta ──────────────────────────────────────────────
+  document.getElementById("metaTitle").textContent = S.meta_title;
+  document.getElementById("metaDescription").setAttribute("content", S.meta_description);
+  document.getElementById("metaKeywords").setAttribute("content", S.meta_keywords);
+  document.getElementById("ogTitle").setAttribute("content", S.site_name);
+  document.getElementById("ogDescription").setAttribute("content", S.meta_description);
+
+  // ── Nav ──────────────────────────────────────────────────────
+  document.getElementById("navLogoMain").textContent = S.site_name;
+  document.getElementById("navLogoSub").textContent = (S.city ? S.city + " · " : "") + "Authentic Satwik";
+  document.getElementById("navCta").textContent = S.nav_cta_text;
+
+  // ── Hero ─────────────────────────────────────────────────────
+  document.getElementById("heroBadge").innerHTML = S.hero_badge;
+  document.getElementById("heroLogoLine1").textContent = S.hero_title_line1;
+  document.getElementById("heroLogoLine2").textContent = S.hero_title_line2;
+  document.getElementById("heroLogoCity").textContent = (S.city || "").toUpperCase();
+  document.getElementById("heroSubtitle1").textContent = S.hero_subtitle1;
+  document.getElementById("heroSubtitle2").textContent = S.hero_subtitle2;
+  document.getElementById("heroTags").innerHTML = (S.hero_tags || "").split("|")
+    .map(t => `<span class="hero-tag">${t}</span>`).join("");
+  const btnP = document.getElementById("heroBtnPrimary");
+  btnP.textContent = S.hero_btn_primary_text; btnP.setAttribute("href", S.hero_btn_primary_link || "#menu");
+  const btnS = document.getElementById("heroBtnSecondary");
+  btnS.textContent = S.hero_btn_secondary_text; btnS.setAttribute("href", S.hero_btn_secondary_link || "#order");
+
+  // ── About ────────────────────────────────────────────────────
+  document.getElementById("aboutInnerTitle").innerHTML = S.site_name.replace(" ", "<br>");
+  document.getElementById("aboutInnerSub").textContent = `Est. ${S.established_year} · ${S.city}`;
+  document.getElementById("aboutEyebrow").textContent = S.about_eyebrow;
+  document.getElementById("aboutTitle").innerHTML = S.about_title;
+  document.getElementById("aboutLead").textContent = S.about_lead_quote;
+  document.getElementById("aboutBody1").innerHTML = S.about_body_1;
+  document.getElementById("aboutBody2").innerHTML = S.about_body_2;
+  document.getElementById("aboutBadges").innerHTML = (S.about_badges || "").split("|")
+    .map(b => `<span class="about-badge">${b}</span>`).join("");
+
+  // ── Why Choose Us ────────────────────────────────────────────
+  const whyItems = CONFIG.HomepageSections
+    .filter(s => s.Section === "why_choose_us" && isTrue(s.Active))
+    .sort((a,b) => (a.DisplayOrder||0) - (b.DisplayOrder||0));
+  document.getElementById("whyGrid").innerHTML = whyItems.map((w,i) => `
+    <div class="why-card reveal reveal-delay-${(i%4)+1}">
+      <div class="why-icon">${w.Icon}</div>
+      <div class="why-title">${w.Title}</div>
+      <p class="why-desc">${w.Description}</p>
+    </div>
+  `).join("");
+
+  // ── Menu section header / note ──────────────────────────────
+  document.getElementById("menuNote").innerHTML = "⚠️ " + S.menu_note.replace(/^⚠️\s*/, "");
+
+  // ── Testimonials ─────────────────────────────────────────────
+  document.getElementById("testiSubtitle").textContent =
+    `The joy of authentic Satwik products in ${S.city} — straight from the heart.`;
+  const testis = CONFIG.HomepageSections
+    .filter(s => s.Section === "testimonial" && isTrue(s.Active))
+    .sort((a,b) => (a.DisplayOrder||0) - (b.DisplayOrder||0));
+  document.getElementById("testimonialsGrid").innerHTML = testis.map((t,i) => `
+    <div class="testi-card reveal reveal-delay-${(i%3)+1}">
+      <div class="testi-stars">${"★".repeat(Number(t.Rating)||5)}</div>
+      <p class="testi-text">${t.Title}</p>
+      <div class="testi-author">
+        <div class="testi-avatar">${t.AuthorInitial || (t.AuthorName||"?").charAt(0)}</div>
+        <div>
+          <div class="testi-name">${t.AuthorName}</div>
+          <div class="testi-location">${t.AuthorLocation}</div>
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  // ── Order section: delivery / privacy / success text ───────
+  const freeAt = Number(D.free_delivery_threshold)||0, charge = Number(D.delivery_charge)||0;
+  document.getElementById("deliveryNote").innerHTML =
+    `<span>Delivery: ${charge} ${currency()} (free over ${freeAt} ${currency()}) · Or self-pickup — to be confirmed</span>`;
+  document.getElementById("orderSuccessMsg").textContent = S.order_success_message;
+
+  // ── Footer ───────────────────────────────────────────────────
+  document.getElementById("footerBrand").textContent = S.footer_brand_name;
+  document.getElementById("footerTagline").textContent = S.footer_tagline;
+  document.getElementById("footerDesc").textContent = S.footer_description;
+  document.getElementById("footerQuote").textContent = S.footer_quote;
+  document.getElementById("footerCopyright").innerHTML = S.footer_copyright;
+  document.getElementById("footerTaglineStrip").innerHTML = S.footer_tagline_strip;
+  document.getElementById("footerAddress").innerHTML =
+    `${C.address}<br><small style="opacity:0.6;">${D.pickup_address_note || ""}</small>`;
+  document.getElementById("footerHours").innerHTML =
+    `Order ${D.advance_notice_hours} hrs in advance<br><small style="opacity:0.6;">Fresh made for you</small>`;
+
+  const wa = (C.whatsapp_number || "").replace(/\D/g,"");
+  document.getElementById("footerWhatsapp").setAttribute("href", `https://wa.me/${wa}`);
+  document.getElementById("footerEmail").setAttribute("href", `mailto:${C.email}`);
+  document.getElementById("footerEmail").textContent = C.email;
+  document.getElementById("socialWhatsapp").setAttribute("href", `https://wa.me/${wa}`);
+  document.getElementById("socialInstagram").setAttribute("href", C.instagram_url || "#");
+  document.getElementById("socialFacebook").setAttribute("href", C.facebook_url || "#");
+  document.getElementById("floatWhatsapp").setAttribute("href", `https://wa.me/${wa}`);
+
+  // ── Min order date (advance notice) ─────────────────────────
+  const advHrs = Number(D.advance_notice_hours) || 48;
+  const d = new Date();
+  d.setHours(d.getHours() + advHrs);
+  document.getElementById("custDate").min = d.toISOString().split("T")[0];
+
+  // ── Build category filters, populate dropdowns, render menu ─
+  buildMenuFilters();
+  buildSubFilters();
+  renderMenu();
+  populateOrderSelect();
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MENU FILTERS (category + sub-category)
+═══════════════════════════════════════════════════════════════════ */
+function buildMenuFilters() {
+  const cats = CONFIG.Categories.filter(c => isTrue(c.Active)).sort((a,b)=>(a.DisplayOrder||0)-(b.DisplayOrder||0));
+  const chips = [`<button class="filter-btn ${currentCategory==='all'?'active':''}" data-cat="all">🌟 All Products</button>`]
+    .concat(cats.map(c => `<button class="filter-btn ${currentCategory===c.CategoryID?'active':''}" data-cat="${c.CategoryID}">${c.FilterLabel}</button>`));
+  const grid = document.getElementById("menuFilters");
+  grid.innerHTML = chips.join("");
+  grid.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      currentCategory = btn.dataset.cat;
+      currentSubCategory = "all";
+      buildMenuFilters();
+      buildSubFilters();
+      renderMenu();
+    });
+  });
+}
+
+function buildSubFilters() {
+  const wrap = document.getElementById("menuSubFilters");
+  const subs = CONFIG.SubCategories
+    .filter(s => s.CategoryID === currentCategory && isTrue(s.Active))
+    .sort((a,b)=>(a.DisplayOrder||0)-(b.DisplayOrder||0));
+
+  if (currentCategory === "all" || subs.length === 0) {
+    wrap.innerHTML = "";
+    wrap.style.display = "none";
+    return;
+  }
+  wrap.style.display = "flex";
+  wrap.innerHTML = subs.map(s => `<button class="filter-btn ${currentSubCategory===s.SubCategoryID?'active':''}" data-sub="${s.SubCategoryID}">${s.Label}</button>`).join("");
+  wrap.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      currentSubCategory = btn.dataset.sub;
+      buildSubFilters();
+      renderMenu();
+    });
+  });
 }
 
 /* ═══════════════════════════════════════════════════════════════════
    MENU RENDERING
 ═══════════════════════════════════════════════════════════════════ */
-function catLabel(cat) {
-  return {milk:"Pure Milk", fried:"Golden Fried", special:"Special Delicacy", ghee:"Pure Ghee"}[cat] || cat;
-}
-
 function renderMenu() {
   const grid = document.getElementById("menuGrid");
   const q = searchQuery.toLowerCase();
-  const filtered = MENU.filter(item => {
-    const catMatch = currentFilter === "all" || item.cat === currentFilter;
-    const searchMatch = !q || item.name.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q);
-    return catMatch && searchMatch;
+
+  const filtered = PRODUCTS.filter(item => {
+    const catMatch = currentCategory === "all" || item.CategoryID === currentCategory;
+    const subMatch = currentSubCategory === "all" || item.SubCategory === currentSubCategory;
+    const searchMatch = !q || item.Name.toLowerCase().includes(q) || (item.Description||"").toLowerCase().includes(q);
+    return catMatch && subMatch && searchMatch;
   });
 
   if (filtered.length === 0) {
     grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text-muted);">
       <div style="font-size:2.5rem;margin-bottom:12px;">🔍</div>
-      <div style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--maroon);">No sweets found</div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--maroon);">No products found</div>
       <div style="font-size:0.88rem;margin-top:8px;">Try a different search or category</div>
     </div>`;
     return;
   }
 
-  grid.innerHTML = filtered.map(item => `
-    <div class="menu-card" data-id="${item.id}">
-      <div class="card-visual" style="background:${item.gradient};">
-        <div class="card-visual-emoji">${item.emoji}</div>
-        <div class="card-cat-badge">${catLabel(item.cat)}</div>
-        <div class="card-price-badge">${item.price} kr.</div>
+  grid.innerHTML = filtered.map(item => {
+    const visual = item.ImageURL
+      ? `<img src="${item.ImageURL}" alt="${item.Name}" style="width:100%;height:100%;object-fit:cover;"/>`
+      : `<div class="card-visual-emoji">${item.Emoji||"🛍️"}</div>`;
+    const bg = item.ImageURL ? "" : `background:linear-gradient(135deg,${item.GradientStart||'#F5DEB3'},${item.GradientEnd||'#C8922A'});`;
+    const variantTags = item.VariantGroups.length
+      ? `<div style="margin-top:6px;font-size:0.72rem;color:var(--text-muted);">${item.VariantGroups.map(v=>`${v.label}: ${v.options.join(', ')}`).join(' · ')}</div>`
+      : "";
+    return `
+    <div class="menu-card" data-id="${item.ProductID}">
+      <div class="card-visual" style="${bg}">
+        ${visual}
+        <div class="card-cat-badge">${cardBadgeText(item)}</div>
+        <div class="card-price-badge">${item.Price} ${currency()}</div>
       </div>
       <div class="card-body">
-        <div class="card-name">${item.name}</div>
-        <div class="card-desc">${item.desc}${item.note ? `<br><span style="color:var(--saffron);font-size:0.73rem;font-weight:600;margin-top:4px;display:block;">⚠️ ${item.note}</span>` : ''}</div>
+        <div class="card-name">${item.Name}</div>
+        <div class="card-desc">${item.Description}${item.Note ? `<br><span style="color:var(--saffron);font-size:0.73rem;font-weight:600;margin-top:4px;display:block;">⚠️ ${item.Note}</span>` : ''}${variantTags}</div>
         <div class="card-footer">
-          <span class="card-unit">📦 ${item.unit}</span>
-          <button class="card-add-btn" onclick="quickAddToCart(${item.id})">+ Add</button>
+          <span class="card-unit">📦 ${item.UnitLabel}</span>
+          <button class="card-add-btn" onclick="quickAddToCart(${item.ProductID})">+ Add</button>
         </div>
       </div>
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
-
-/* ─── Filter buttons ─── */
-document.querySelectorAll(".filter-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    currentFilter = btn.dataset.cat;
-    renderMenu();
-  });
-});
 
 /* ─── Search ─── */
 document.getElementById("menuSearch").addEventListener("input", e => {
@@ -1708,52 +1791,100 @@ document.getElementById("menuSearch").addEventListener("input", e => {
   renderMenu();
 });
 
-/* Initial render */
-renderMenu();
+/* ═══════════════════════════════════════════════════════════════════
+   ORDER FORM: product / unit / variant selectors
+═══════════════════════════════════════════════════════════════════ */
+function populateOrderSelect() {
+  const orderSelect = document.getElementById("orderSelect");
+  orderSelect.innerHTML = `<option value="">— Choose a product —</option>`;
+  PRODUCTS.forEach(item => {
+    const opt = document.createElement("option");
+    opt.value = item.ProductID;
+    opt.textContent = `${item.Name} — ${item.Price} ${currency()} (${item.UnitLabel})`;
+    orderSelect.appendChild(opt);
+  });
+  updateUnitAndVariantInputs();
+}
 
-/* ─── Populate order dropdown ─── */
-const orderSelect = document.getElementById("orderSelect");
-MENU.forEach(item => {
-  const opt = document.createElement("option");
-  opt.value = item.id;
-  opt.textContent = `${item.name} — ${item.price} kr. (${item.unit})`;
-  orderSelect.appendChild(opt);
-});
+document.getElementById("orderSelect").addEventListener("change", updateUnitAndVariantInputs);
+
+function updateUnitAndVariantInputs() {
+  const id = parseInt(document.getElementById("orderSelect").value);
+  const unitSelect = document.getElementById("orderUnit");
+  const item = PRODUCTS.find(m => m.ProductID === id);
+  const units = (item ? item.AvailableUnits : ["pieces"]);
+  unitSelect.innerHTML = units.map(u => `<option value="${u}">${unitLabelFor(u)}</option>`).join("");
+
+  const row = document.getElementById("orderVariantsRow");
+  if (item && item.VariantGroups.length) {
+    row.style.display = "flex";
+    row.innerHTML = item.VariantGroups.map((v, idx) => `
+      <div class="form-group" style="margin-bottom:0">
+        <label class="form-label">${v.label} <span style="color:var(--text-muted);font-weight:400;">(optional)</span></label>
+        <select class="form-control" data-variant-label="${v.label}" id="variantSelect${idx}">
+          <option value="">— Select ${v.label} —</option>
+          ${v.options.map(o=>`<option value="${o}">${o}</option>`).join("")}
+        </select>
+      </div>
+    `).join("");
+  } else {
+    row.style.display = "none";
+    row.innerHTML = "";
+  }
+}
 
 /* ═══════════════════════════════════════════════════════════════════
    CART LOGIC
 ═══════════════════════════════════════════════════════════════════ */
 function quickAddToCart(id) {
-  const item = MENU.find(m => m.id === id);
+  const item = PRODUCTS.find(m => m.ProductID === id);
   if (!item) return;
-  addItemToCart(item, 1, item.cartUnit || "pieces");
+  addItemToCart(item, 1, item.AvailableUnits[0] || "pieces", "");
 }
 
 document.getElementById("addToCartBtn").addEventListener("click", () => {
-  const id = parseInt(orderSelect.value);
+  const id = parseInt(document.getElementById("orderSelect").value);
   const qty = parseInt(document.getElementById("orderQty").value) || 1;
   const unit = document.getElementById("orderUnit").value;
-  if (!id) { showToast("Please select a sweet first!"); return; }
-  const item = MENU.find(m => m.id === id);
-  addItemToCart(item, qty, unit);
+  if (!id) { showToast("Please select a product first!"); return; }
+  const item = PRODUCTS.find(m => m.ProductID === id);
+
+  // Collect informational variant selections (do not affect price)
+  const variantParts = [];
+  if (item.VariantGroups.length) {
+    item.VariantGroups.forEach((v, idx) => {
+      const sel = document.getElementById(`variantSelect${idx}`);
+      if (sel && sel.value) variantParts.push(`${v.label}: ${sel.value}`);
+    });
+  }
+  const variantStr = variantParts.join(", ");
+
+  addItemToCart(item, qty, unit, variantStr);
 });
 
-function addItemToCart(item, qty, unit) {
-  const existing = cart.find(c => c.id === item.id && c.unit === unit);
+function addItemToCart(item, qty, unit, variantStr) {
+  const existing = cart.find(c => c.id === item.ProductID && c.unit === unit && c.variant === (variantStr||""));
   if (existing) {
     existing.qty += qty;
   } else {
-    cart.push({ id: item.id, name: item.name, price: item.price, qty, unit, unitLabel: item.unit });
+    cart.push({
+      id: item.ProductID, name: item.Name, price: item.Price,
+      qty, unit, unitLabel: item.UnitLabel, variant: variantStr || "",
+    });
   }
   renderCart();
   updateFloatCart();
-  showToast(`✓ ${item.name} added to cart!`);
+  showToast(`✓ ${item.Name} added to cart!`);
 }
 
-function removeFromCart(id, unit) {
-  cart = cart.filter(c => !(c.id === id && c.unit === unit));
+function removeFromCart(id, unit, variant) {
+  cart = cart.filter(c => !(c.id === id && c.unit === unit && c.variant === (variant||"")));
   renderCart();
   updateFloatCart();
+}
+
+function cartLineLabel(c) {
+  return c.variant ? `${c.qty} ${c.unit} × ${c.price} ${currency()} · ${c.variant}` : `${c.qty} ${c.unit} × ${c.price} ${currency()}`;
 }
 
 function renderCart() {
@@ -1761,8 +1892,9 @@ function renderCart() {
   const totalsEl = document.getElementById("cartTotals");
 
   if (cart.length === 0) {
-    el.innerHTML = `<div class="cart-empty"><span>🛒</span>Your cart is empty.<br>Add some delicious sweets!</div>`;
+    el.innerHTML = `<div class="cart-empty"><span>🛒</span>Your cart is empty.<br>Add some items above!</div>`;
     totalsEl.style.display = "none";
+    renderSidebarCart();
     return;
   }
 
@@ -1771,18 +1903,18 @@ function renderCart() {
     <div class="cart-item">
       <div>
         <div class="cart-item-name">${c.name}</div>
-        <div class="cart-item-detail">${c.qty} ${c.unit} × ${c.price} kr.</div>
+        <div class="cart-item-detail">${cartLineLabel(c)}</div>
       </div>
       <div style="display:flex;align-items:center;gap:8px;">
-        <div class="cart-item-price">${c.price * c.qty} kr.</div>
-        <button class="cart-item-remove" onclick="removeFromCart(${c.id},'${c.unit}')">✕</button>
+        <div class="cart-item-price">${c.price * c.qty} ${currency()}</div>
+        <button class="cart-item-remove" onclick="removeFromCart(${c.id},'${c.unit}','${c.variant.replace(/'/g,"\\'")}')">✕</button>
       </div>
     </div>
   `).join("");
 
   totalsEl.style.display = "block";
-  document.getElementById("subtotalVal").textContent = total + " kr.";
-  document.getElementById("totalVal").textContent = total + " kr.";
+  document.getElementById("subtotalVal").textContent = total + " " + currency();
+  document.getElementById("totalVal").textContent = total + " " + currency();
 
   renderSidebarCart();
 }
@@ -1800,16 +1932,16 @@ function renderSidebarCart() {
     <div class="cart-item">
       <div>
         <div class="cart-item-name">${c.name}</div>
-        <div class="cart-item-detail">${c.qty} ${c.unit} × ${c.price} kr.</div>
+        <div class="cart-item-detail">${cartLineLabel(c)}</div>
       </div>
       <div style="display:flex;align-items:center;gap:8px;">
-        <div class="cart-item-price">${c.price * c.qty} kr.</div>
-        <button class="cart-item-remove" onclick="removeFromCart(${c.id},'${c.unit}')">✕</button>
+        <div class="cart-item-price">${c.price * c.qty} ${currency()}</div>
+        <button class="cart-item-remove" onclick="removeFromCart(${c.id},'${c.unit}','${c.variant.replace(/'/g,"\\'")}')">✕</button>
       </div>
     </div>
   `).join("");
   footer.style.display = "block";
-  document.getElementById("sidebarTotal").textContent = total + " kr.";
+  document.getElementById("sidebarTotal").textContent = total + " " + currency();
 }
 
 function updateFloatCart() {
@@ -1845,7 +1977,8 @@ function generateOrderId() {
   const dd = String(now.getDate()).padStart(2,"0");
   const mm = String(now.getMonth()+1).padStart(2,"0");
   const seq = Math.floor(Math.random()*9000+1000);
-  return `RKS-${dd}${mm}-${seq}`;
+  const prefix = (CONFIG.OrderSettings && CONFIG.OrderSettings.order_id_prefix) || "TS";
+  return `${prefix}-${dd}${mm}-${seq}`;
 }
 
 document.getElementById("submitOrderBtn").addEventListener("click", submitOrder);
@@ -1858,11 +1991,11 @@ async function submitOrder() {
   const note    = document.getElementById("custNote").value.trim();
   const date    = document.getElementById("custDate").value;
 
-  // ── Validation (Address is now OPTIONAL) ─────────────────────
+  // ── Validation (Address is OPTIONAL) ─────────────────────────
   if (!name)    { showToast("⚠️ Please enter your name."); return; }
   if (!email)   { showToast("⚠️ Please enter your email."); return; }
   if (!phone)   { showToast("⚠️ Please enter your phone number."); return; }
-  if (cart.length === 0) { showToast("⚠️ Your cart is empty. Add some sweets first!"); return; }
+  if (cart.length === 0) { showToast("⚠️ Your cart is empty. Add some items first!"); return; }
 
   const orderId    = generateOrderId();
   const customerId = generateCustomerId();
@@ -1870,16 +2003,16 @@ async function submitOrder() {
   const timestamp  = new Date().toISOString();
 
   // Fold the preferred date into the Notes field so nothing is lost
-  // while keeping the agreed 11-column sheet structure.
+  // while keeping the agreed sheet structure.
   let notes = note;
   if (date) notes = (notes ? notes + " | " : "") + "Preferred date: " + date;
 
   // One entry per cart line → one row per product in the sheet.
   const items = cart.map(c => ({
-    product:   c.name,
+    product:   c.variant ? `${c.name} (${c.variant})` : c.name,
     quantity:  `${c.qty} ${c.unit}`,   // e.g. "2 kg", "4 pieces"
-    unitPrice: c.price,                // numeric, in kr.
-    subtotal:  c.price * c.qty,        // numeric, in kr.
+    unitPrice: c.price,                // numeric, in currency units
+    subtotal:  c.price * c.qty,        // numeric, in currency units
   }));
 
   // Payload maps 1:1 to the Google Sheet columns.
@@ -1890,7 +2023,7 @@ async function submitOrder() {
     email:       email,
     address:     address,        // may be "" — optional
     items:       items,
-    totalAmount: total,          // numeric, in kr.
+    totalAmount: total,
     notes:       notes,
     sheetId:     GOOGLE_SHEET_ID,
     sheetTab:    GOOGLE_SHEET_TAB,
@@ -1960,13 +2093,63 @@ function showToast(msg) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SET MIN DATE FOR ORDER FORM
+   PETALS / NAV / REVEAL (visuals — unchanged)
 ═══════════════════════════════════════════════════════════════════ */
-(function setMinDate() {
-  const d = new Date();
-  d.setDate(d.getDate() + 2); // 48-hour advance notice
-  document.getElementById("custDate").min = d.toISOString().split("T")[0];
-})();
+function createPetals() {
+  const hero = document.getElementById("hero");
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement("div");
+    p.className = "petal";
+    const size = 6 + Math.random() * 10;
+    p.style.cssText = `
+      width:${size}px;height:${size}px;
+      left:${Math.random() * 100}%;
+      top:${100 + Math.random() * 20}%;
+      animation-duration:${6 + Math.random() * 10}s;
+      animation-delay:${Math.random() * 8}s;
+      opacity:${0.2 + Math.random() * 0.4};
+      background:rgba(${Math.random()>.5?'200,150,42':'232,119,30'},0.3);
+      border-radius:${Math.random()>.5?'50%':'40% 0'};
+    `;
+    hero.appendChild(p);
+  }
+}
+
+const nav = document.getElementById("nav");
+const hamburger = document.getElementById("hamburger");
+const navMobile = document.getElementById("navMobile");
+
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+hamburger.addEventListener("click", () => {
+  navMobile.classList.toggle("open");
+});
+
+document.querySelectorAll("#navMobile a").forEach(a => {
+  a.addEventListener("click", () => navMobile.classList.remove("open"));
+});
+
+function initReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   INIT
+═══════════════════════════════════════════════════════════════════ */
+window.addEventListener("load", () => {
+  loadConfig().then(() => {
+    initReveal();
+  });
+  setTimeout(() => {
+    document.getElementById("loading").classList.add("hidden");
+    createPetals();
+  }, 900);
+});
 
 /* ═══════════════════════════════════════════════════════════════════
    SMOOTH SCROLL FOR NAV LINKS
