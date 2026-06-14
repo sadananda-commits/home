@@ -1209,7 +1209,7 @@ body::before{
 
           <div class="google-sheets-note" id="privacyNote">
             <strong>🔒 Your data is safe.</strong> Order details will be saved securely and used only to process your order.
-            A confirmation will be sent to your email / WhatsApp.
+            A confirmation email will be sent to the email address you provide.
           </div>
 
           <button class="submit-btn" id="submitOrderBtn" style="margin-top:18px;" type="button">
@@ -1222,8 +1222,8 @@ body::before{
           <div class="success-icon">🎉</div>
           <div class="success-title">Order Placed Successfully!</div>
           <p class="success-msg" id="orderSuccessMsg">
-            Thank you for your order. We have received your details and will confirm your order shortly via WhatsApp or email.
-            Jai Shree Radhe!
+            Thank you for your order. We have received your details and a confirmation email is on its way.
+            We will confirm your order shortly. Jai Shree Radhe!
           </p>
           <div class="order-id-box">
             <div class="order-id-label">YOUR ORDER ID</div>
@@ -1359,8 +1359,8 @@ body::before{
 
    See /sheet/README.md for how to set up the Sheet + Apps Script.
    ═══════════════════════════════════════════════════════════════════ */
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysWuyYBWFDsqhn-EBnIZnciByMcFX8dyulqHc6uibNmaR97K8CIsgCSqNxaMOLE2L_/exec";
-const GOOGLE_SHEET_ID  = "YOUR_GOOGLE_SHEET_ID_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby9eQYS2IKB3XBEQnr5PUg5yDekj5I22zXz2L4fhlJGz5M3y2HQU0nQae5FWjecTkKz/exec";
+const GOOGLE_SHEET_ID  = "1bjQcPkU_2MMFTMhSkdHNp9_mYd6Y-9-XcucvcrOdtek";
 const GOOGLE_SHEET_TAB = "Orders";
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -1402,7 +1402,16 @@ const DEFAULT_CONFIG = {
     footer_copyright: "© 2025 Spiritual Marketplace, Copenhagen · All Rights Reserved · Made with <span>❤️</span> & Devotion",
     footer_tagline_strip: "🌿 Pure Vegetarian &nbsp;|&nbsp; 🙏 Satwik &nbsp;|&nbsp; 🏠 Homemade &nbsp;|&nbsp; 🇮🇳 Authentic Indian",
     menu_note: "⚠️ <strong>Note:</strong> Some items have minimum order quantities — see individual product notes. All items are prepared/sourced fresh — please order in advance. Contact us on WhatsApp for bulk/event orders.",
-    order_success_message: "Thank you for your order. We have received your details and will confirm your order shortly via WhatsApp or email. Jai Shree Radhe!",
+    order_success_message: "Thank you for your order. We have received your details and a confirmation email is on its way. We will confirm your order shortly. Jai Shree Radhe!",
+    // ── Notification channels (mirrors Settings tab) ──────────────
+    // Channels can be independently enabled. If WhatsApp is disabled,
+    // the backend automatically falls back to email.
+    email_notifications_enabled: "TRUE",
+    whatsapp_notifications_enabled: "FALSE",
+    sender_name: "Spiritual Marketplace",
+    reply_to_email: "info@spiritualmarketplace.dk",
+    seller_default_email: "info@spiritualmarketplace.dk",
+    notify_channel_priority: "whatsapp,email",
   },
   Delivery: {
     delivery_areas: "Copenhagen K|Frederiksberg|Nørrebro|Østerbro",
@@ -2030,13 +2039,33 @@ async function submitOrder() {
   };
 
   const btn = document.getElementById("submitOrderBtn");
+
+  // ── Duplicate-submission guards ──────────────────────────────
+  // Two layers, so a refresh / double-tap can't create a second order
+  // or trigger a second round of email/WhatsApp notifications:
+  //   (a) in-flight guard — ignore clicks while a submit is running;
+  //   (b) completed guard — once an order has been SUCCESSFULLY saved,
+  //       block re-submission of the same cart. The Apps Script backend
+  //       also de-dupes by orderId as a third, server-side layer.
+  if (window.__orderInFlight) return;
+  if (sessionStorage.getItem("completedOrderId")) {
+    showToast("⚠️ You've already placed this order.");
+    return;
+  }
+  window.__orderInFlight = true;
   btn.disabled = true;
   btn.innerHTML = "⏳ &nbsp;Submitting…";
 
   // ── Send to Google Sheets via Apps Script ────────────────────
+  // The backend saves the order FIRST, then sends notifications
+  // (email now, WhatsApp when its Business API is enabled). Notification
+  // failures never fail the order — they're logged server-side. From the
+  // browser we only need to know the save request was delivered.
+  //
   // Apps Script Web Apps don't return CORS headers a browser can read,
   // so we POST with mode:"no-cors". A resolved fetch ⇒ delivered;
-  // a thrown fetch ⇒ network failure, which we surface to the user.
+  // a thrown fetch ⇒ network failure, which we surface to the user and
+  // allow them to retry (the orderId is only "burned" on success).
   if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE") {
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
@@ -2049,14 +2078,20 @@ async function submitOrder() {
     } catch (err) {
       console.error("Google Sheets submission error:", err);
       showToast("⚠️ Couldn't submit your order. Please check your connection and try again.");
+      window.__orderInFlight = false;
       btn.disabled = false;
       btn.innerHTML = "🙏 &nbsp;Place My Order";
-      return; // Do NOT show the success screen on failure
+      return; // Do NOT mark complete or show success on failure
     }
   } else {
     // Dev mode — log to console until the Web App URL is configured.
     console.log("📋 ORDER PAYLOAD (set GOOGLE_SCRIPT_URL to send to Sheets):", payload);
   }
+
+  // Save confirmed delivered → mark this order complete so it can't be
+  // re-submitted by a refresh/retry. Notifications are handled by the backend.
+  sessionStorage.setItem("completedOrderId", orderId);
+  window.__orderInFlight = false;
 
   // ── Show success ─────────────────────────────────────────────
   document.getElementById("displayOrderId").textContent = orderId;
@@ -2070,6 +2105,9 @@ async function submitOrder() {
 }
 
 function resetOrder() {
+  // Allow a brand-new order after a completed one (clears the dup guard).
+  sessionStorage.removeItem("completedOrderId");
+  window.__orderInFlight = false;
   document.getElementById("orderFormWrap").style.display = "block";
   document.getElementById("orderSuccess").classList.remove("show");
   document.getElementById("custName").value = "";
